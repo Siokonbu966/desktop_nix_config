@@ -26,13 +26,13 @@
         Semicolon = "s";
         Slash = "j";
         Apostrophe = "h";
-        Shift_R = "b";
+        RO = "b";
         Dot = "m";
-        Enter = "p";
+        Backslash = "p";
         CapsLock = "q";
 
         # 特殊キー
-        Alt_L = "Enter";
+        Muhenkan = "Enter";
         b = "Ctrl_L";
         n = "Alt_R";
         h = "Shift_L";
@@ -47,7 +47,7 @@
           alone = "Backspace";
           free_hold = true;
         };
-        Alt_R = {
+        Henkan = {
           held = "ScrollLock";
           alone = "Space";
           free_hold = true;

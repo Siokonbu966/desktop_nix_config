@@ -14,41 +14,41 @@
       Insert-f = "3";
       Insert-o = "6";
       Insert-Comma = "Dot";  # .
-      Insert-k = "Equal";    # ^
-      Insert-g = "Shift-RO"; # _
+      Insert-k = "Shift-6";    # ^
+      Insert-g = "Shift-Minus"; # _
       Insert-w = "Shift-Comma";  # <
-      Insert-t = "Shift-Semicolon";  # +
+      Insert-t = "Shift-Equal";  # +
       Insert-d = "Shift-1";  # !
-      Insert-r = "Shift-Minus";  # =
+      Insert-r = "Equal";  # =
       Insert-n = "Minus";    # -
       Insert-m = "Shift-Slash";  # ?
       Insert-y = "Shift-dot";  # >
       Insert-s = "Kpasterisk";  # *
-      Insert-j = "Apostrophe";  # ;
-      Insert-b = "Semicolon";   # :
+      Insert-j = "Semicolon";  # ;
+      Insert-b = "Shift-Semicolon";   # :
       Insert-h = "Slash";   # /
       Insert-p = "Shift-5";  # %
-      Insert-q = "Shift-Equal";  # ~
+      Insert-q = "Shift-Grave";  # ~
     };
   }
 
   {
     name = "L2";
     remap = {
-      ScrollLock-z = "Yen";  # ¥
+      ScrollLock-z = "BackSlash";  # ¥ \
       ScrollLock-e = "Shift-3";  # #
-      ScrollLock-x = "Shift-RightBrace";  # {
-      ScrollLock-l = "RightBrace";  # [
-      ScrollLock-i = "Shift-8";  # (
-      ScrollLock-c = "Shift-LeftBrace";  # `
-      ScrollLock-u = "Shift-2";  # "
-      ScrollLock-a = "Shift-7";  # "
-      ScrollLock-v = "Shift-BackSlash";  # }
-      ScrollLock-f = "BackSlash";  # ]
-      ScrollLock-o = "Shift-9";  # )
-      ScrollLock-q = "LeftBrace";  # @
-      ScrollLock-Comma = "Shift-Yen";  # |
-      ScrollLock-Minus = "Shift-6";  # &
+      ScrollLock-x = "Shift-LeftBrace";  # {
+      ScrollLock-l = "LeftBrace";  # [
+      ScrollLock-i = "Shift-9";  # (
+      ScrollLock-c = "Grave";  # `
+      ScrollLock-u = "Shift-Apostrophe";  # "
+      ScrollLock-a = "Apostrophe";  # '
+      ScrollLock-v = "Shift-RightBrace";  # }
+      ScrollLock-f = "RightBrace";  # ]
+      ScrollLock-o = "Shift-0";  # )
+      ScrollLock-q = "Shift-2";  # @
+      ScrollLock-Comma = "Shift-BackSlash";  # |
+      ScrollLock-Minus = "Shift-7";  # &
       ScrollLock-k = "VolumeUp";
       ScrollLock-g = "VolumeDown";
       ScrollLock-w = "Esc";

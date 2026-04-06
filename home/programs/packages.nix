@@ -25,6 +25,7 @@
       waybar
       grim
       mako
+      xremap
       # desktop client
       obsidian
       obs-studio
