@@ -1,10 +1,4 @@
-{
-  virtual_modifiers = [
-    "Insert"      # Layer 1 Spaceの代わり
-    "ScrollLock"  # Layer 2 Henkanの代わり
-  ];
-
-  modmap = [
+[
     {
       name = "default";
       remap = {
@@ -59,6 +53,5 @@
           free_hold = true;
         };
       };
-    }
-  ];
-}
+    }  
+]

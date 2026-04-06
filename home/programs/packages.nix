@@ -28,6 +28,6 @@
       # desktop client
       obsidian
       obs-studio
-      discord
-    ]);
+      vesktop
+  ]);
 }

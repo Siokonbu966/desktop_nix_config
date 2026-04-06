@@ -6,6 +6,9 @@
       startup = [
         { command = "waybar"; }
       ];
+      keybindings = {
+        "Mod4+d" = "exec fuzzel";
+      };
     };
 
     extraConfig = ''
