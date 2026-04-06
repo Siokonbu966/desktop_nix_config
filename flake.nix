@@ -9,7 +9,7 @@
       url = "github:Siokonbu966/dotfiles";
       flake = false;
     };
-    xremap-flake.url = "github:Siokonbu966/dotfiles";
+    xremap-flake.url = "github:xremap/nix-flake";
   };
 
   outputs = { self, nixpkgs, home-manager, my-dotfiles, ... }@inputs: {
@@ -20,7 +20,7 @@
           ./configuration.nix
           ./hardware-configuration.nix
           inputs.xremap-flake.nixosModules.default
-          ./modules/xremap.nix
+          ./modules/xremap
 
           home-manager.nixosModules.home-manager {
             home-manager = {

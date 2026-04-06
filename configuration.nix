@@ -69,27 +69,9 @@
     packages = with pkgs; [
       kdePackages.kate
       picom
-      xremap
     #  thunderbird
     ];
   };
-
-  systemd.services.xremap = {
-    description = "xremap deamon";
-    after = [ "graphical.target" ];
-    wantedBy = [ "graphical.target" ];
-
-    serviceConfig = {
-      ExecStart = ''
-        ${pkgs.xremap}/bin/xremap \
-        /home/crocus/.config/xremap/config_hypr.yml \
-        --device="Keychron B1 Pro Keyboard" \
-        --device="Keychron Keychron Receiver Keyboard"
-      '';
-      Restart = "always";
-    };
-  };
-
    # Install firefox.
   programs.firefox.enable = true;
 
