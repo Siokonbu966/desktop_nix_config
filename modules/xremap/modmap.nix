@@ -36,6 +36,7 @@
         b = "Ctrl_L";
         n = "Alt_R";
         h = "Shift_L";
+        t = "Kp0";
       };
     }
 

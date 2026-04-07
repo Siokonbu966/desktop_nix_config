@@ -24,8 +24,8 @@
       Insert-m = "Shift-Slash";  # ?
       Insert-y = "Shift-dot";  # >
       Insert-s = "Kpasterisk";  # *
-      Insert-j = "Semicolon";  # ;
-      Insert-b = "Shift-Semicolon";   # :
+      Insert-j = "Shift-Semicolon";  # ;
+      Insert-b = "Semicolon";   # :
       Insert-h = "Slash";   # /
       Insert-p = "Shift-5";  # %
       Insert-q = "Shift-Grave";  # ~
@@ -58,6 +58,13 @@
       ScrollLock-s = "Right";
       ScrollLock-h = "Insert";
       ScrollLock-b = "ScrollLock";
+    };
+  }
+
+  {
+    name = "other";
+    remap = {
+      Kp0 = "Shift-Equal";
     };
   }
 ]
