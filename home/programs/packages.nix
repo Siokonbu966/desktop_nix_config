@@ -27,6 +27,7 @@
       mako
       xremap
       github-copilot-cli
+      pavucontrol
       # desktop client
       obsidian
       obs-studio
