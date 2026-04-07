@@ -26,6 +26,7 @@
       grim
       mako
       xremap
+      github-copilot-cli
       # desktop client
       obsidian
       obs-studio
