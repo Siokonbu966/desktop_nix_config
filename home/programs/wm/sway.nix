@@ -1,19 +1,11 @@
 {...}:
 {
   wayland.windowManager.sway = {
-    config = {
-      bars = [ ];
-      startup = [
-        { command = "waybar"; }
-      ];
-      keybindings = {
-        "Mod4+d" = "exec fuzzel";
-      };
-    };
-
+    enable = true;
     extraConfig = ''
-      set $term ghostty
-      bindsym $mod+Return exec $term
+      set $mod Mod4
+      bindsym $mod+space exec fuzzel
+      bindsym $mod+Return exec ghostty
     '';
   };
 }
