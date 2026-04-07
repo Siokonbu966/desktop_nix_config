@@ -1,4 +1,4 @@
-{ configs, lib, ... }:
+{ config, lib, ... }:
 {
   environment.sessionVariables = {
   WLR_NO_HARDWARE_CURSORS = "1";

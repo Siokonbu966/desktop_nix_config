@@ -1,4 +1,4 @@
-{ configs, lib, pkgs, ...}:
+{ config, lib, pkgs, ...}:
 {
   # Select internationalisation properties.
   i18n.defaultLocale = "ja_JP.UTF-8";
@@ -24,7 +24,7 @@
     enable = true;
     fcitx5.waylandFrontend = true;
     fcitx5.addons = with pkgs;[
-      fcitx5-mozc
+      fcitx5-mozc-ut
       fcitx5-gtk
     ];
   };

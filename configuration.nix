@@ -67,12 +67,17 @@
       "inputs"
     ];
     packages = with pkgs; [
-      kdePackages.kate
-      picom
     #  thunderbird
     ];
   };
-   # Install firefox.
+
+  environment.sessionVariables = with pkgs; {
+    GTK_IM_MODULES = "fcitx";
+    QT_IM_MODULES = "fcitx";
+    XMODIFERS = "@im=fcitx";
+  };
+
+  # Install firefox.
   programs.firefox.enable = true;
 
   # Allow unfree packages
