@@ -58,6 +58,9 @@
       ScrollLock-s = "Right";
       ScrollLock-h = "Insert";
       ScrollLock-b = "ScrollLock";
+      ScrollLock-j = "NextSong";
+      ScrollLock-m = "Play";
+      ScrollLock-d = "PreviousSong";
     };
   }
 

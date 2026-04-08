@@ -28,9 +28,11 @@
       xremap
       github-copilot-cli
       pavucontrol
+      realvnc-vnc-viewer
       # desktop client
       obsidian
       obs-studio
       vesktop
+      thunar
   ]);
 }
