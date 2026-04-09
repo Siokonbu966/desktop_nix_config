@@ -4,6 +4,7 @@
     ./programs/packages.nix
     ./programs/dotfiles.nix
     ./programs/fuzzel.nix
+    ./programs/udisk.nix
     ./programs/wm/waybar.nix
     ./programs/wm/sway.nix
   ];

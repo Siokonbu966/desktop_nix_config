@@ -4,6 +4,7 @@
     enable = true;
     config = {
       bars = [ ];
+      modifier = "Mod4";
     };
     extraConfig = ''
       set $mod Mod4
