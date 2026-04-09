@@ -33,6 +33,6 @@
       obsidian
       obs-studio
       vesktop
-      nemo
+      nemo-with-extensions
   ]);
 }

@@ -71,7 +71,7 @@
     ];
   };
 
-  services.udisk2.enable = true;
+  services.udisks2.enable = true;
 
   environment.sessionVariables = with pkgs; {
     GTK_IM_MODULES = "fcitx";
