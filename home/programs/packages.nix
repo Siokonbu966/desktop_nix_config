@@ -26,6 +26,7 @@
       waybar
       grim
       mako
+      libnotify
       xremap
       github-copilot-cli
       # desktop client
