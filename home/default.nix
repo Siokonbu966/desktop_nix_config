@@ -5,8 +5,8 @@
     ./programs/dotfiles.nix
     ./programs/fuzzel.nix
     ./programs/udisk.nix
-    ./programs/wm/waybar.nix
-    ./programs/wm/sway.nix
+    ./programs/wm
+    ./programs/mako.nix
   ];
 
   home = rec {
