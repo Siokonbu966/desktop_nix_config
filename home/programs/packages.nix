@@ -27,12 +27,14 @@
       mako
       xremap
       github-copilot-cli
-      pavucontrol
-      realvnc-vnc-viewer
       # desktop client
       obsidian
       obs-studio
       vesktop
       nemo-with-extensions
+      pavucontrol
+      realvnc-vnc-viewer
+      vlc
+      swaybg
   ]);
 }

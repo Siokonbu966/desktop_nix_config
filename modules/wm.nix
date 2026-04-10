@@ -11,7 +11,7 @@
   #  enable = true;
   #  exportConfiguration = true;
   #  displayManager.lightdm.enable = true;
-    
+
     # Enable the LXQt Desktop Environment.
     # desktopManager.lxqt.enable = true;
   #};

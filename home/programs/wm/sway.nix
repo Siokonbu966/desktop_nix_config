@@ -2,15 +2,15 @@
 {
   wayland.windowManager.sway = {
     enable = true;
+    checkConfig = false;
     config = {
       bars = [ ];
       modifier = "Mod4";
+      terminal = "ghostty";
     };
     extraConfig = ''
       set $mod Mod4
-      bindsym $mod+space exec fuzzel
-      bindsym $mod+Return exec ghostty
-      bindsym $mod+Shift+q kill
+      bindsym mod1+space exec fuzzel
 
       # Volume
       bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
@@ -25,6 +25,9 @@
 
       exec_always waybar
       exec_always fcitx5
+
+      # bg
+      output * bg /home/crocus/Pictures/photo/favorite/mahuyu_26_birthday.PNG fill
     '';
   };
 }
