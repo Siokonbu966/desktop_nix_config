@@ -11,6 +11,7 @@
       tree
       gh
       wl-clipboard
+      slurp
       btop
       tmux
       gcc

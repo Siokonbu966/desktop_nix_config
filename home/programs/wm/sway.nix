@@ -22,8 +22,8 @@
       bindsym XF86AudioPause exec playerctl pause
       bindsym XF86AudioNext exec playerctl next
       bindsym XF86AudioPrev exec playerctl previous
+      bindsym Print exec grim ~/Pictures/screen_shots/$(date +%Y.%m.%d-%H:%M:%S).png
 
-      exec_always waybar
       exec_always fcitx5
 
       # bg
