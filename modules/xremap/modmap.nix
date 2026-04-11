@@ -32,7 +32,7 @@
       h = "Shift_L";
       t = "Kp0"; # +
 
-      # mj xc
+      # IME切り替え用
       Slash = {
         held = "RightMeta";
         alone = "j";
@@ -48,16 +48,18 @@
   }
 
   {
-    name = "jis";
+    name = "JIS";
     device = {
-      only = "Keychron Keychron K2";
+      only = [
+        "Keychron Keychron K2"
+      ];
     };
     remap = {
       RO = "b";
       Backslash = "p";
-      # 特殊キー
       Muhenkan = "Enter";
 
+      # Layer用
       Space = {
         held = "Insert";
         alone = "Backspace";
@@ -72,16 +74,19 @@
   }
 
   {
-    name = "global_us";
+    name = "US";
     device = {
-      only = "Keychron Keychron Receiver Keyboard";
+      only = [
+        "Keychron Keychron Receiver Keyboard"
+        "Keychron B1 Pro Keyboard"
+      ];
     };
     remap = {
       Shift_R = "b";
       Enter = "p";
-      # 特殊キー
       Alt_L = "Enter";
 
+      # Layer用
       Space = {
         held = "Insert";
         alone = "Backspace";
