@@ -7,6 +7,7 @@
     ./programs/udisk.nix
     ./programs/wm
     ./programs/mako.nix
+    ./programs/zsh.nix
   ];
 
   home = rec {
