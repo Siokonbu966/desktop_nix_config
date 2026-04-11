@@ -37,7 +37,7 @@
       nemo-with-extensions
       pavucontrol
       realvnc-vnc-viewer
-      kdgPackages.falkon
+      kdePackages.falkon
       vlc
       swaybg
   ]);

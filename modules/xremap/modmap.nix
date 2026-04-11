@@ -4,7 +4,6 @@
     remap = {
       Shift_L = "z";
       a = "e";
-      z = "x";
       w = "l";
       s = "i";
       x = "c";
@@ -24,7 +23,6 @@
       p = "y";
       l = "n";
       Semicolon = "s";
-      Slash = "j";
       Apostrophe = "h";
       CapsLock = "q";
       Dot = "m";
@@ -33,6 +31,19 @@
       n = "Alt_R";
       h = "Shift_L";
       t = "Kp0"; # +
+
+      # mj xc
+      Slash = {
+        held = "RightMeta";
+        alone = "j";
+        free_hold = true;
+      };
+      z = {
+        held = "RightMeta";
+        alone = "x";
+        free_hold = true;
+      };
+
     };
   }
 
