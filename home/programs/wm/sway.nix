@@ -4,7 +4,11 @@
     enable = true;
     checkConfig = false;
     config = {
-      bars = [ ];
+      bars = [
+        {
+          command = "waybar";
+        }
+      ];
       modifier = "Mod4";
       terminal = "ghostty";
     };

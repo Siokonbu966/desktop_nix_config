@@ -16,6 +16,7 @@
         "Noto Color Emoji"
       ];
       sansSerif = [
+        "Noto Sans"
         "Noto Sans CJK JP"
         "Noto Color Emoji"
       ];
