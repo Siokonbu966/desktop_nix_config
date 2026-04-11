@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./modules
+      ./modules/xremap
     ];
 
   networking.hostName = "nixos_surface";
