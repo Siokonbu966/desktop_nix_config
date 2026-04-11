@@ -17,8 +17,7 @@
       surface = inputs.nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./configuration.nix
-          ./hardware-configuration.nix
+          ./hosts/surface
           inputs.xremap-flake.nixosModules.default
           ./modules/xremap
 
@@ -36,8 +35,7 @@
       desktop = inputs.nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./configuration.nix
-          ./hardware-configuration.nix
+          ./hosts/desktop
           ./nvidia
           inputs.xremap-flake.nixosModules.default
           ./modules/xremap
