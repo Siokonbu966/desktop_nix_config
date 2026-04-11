@@ -14,11 +14,31 @@
 
   outputs = { self, nixpkgs, home-manager, my-dotfiles, ... }@inputs: {
     nixosConfigurations = {
-      nixos = inputs.nixpkgs.lib.nixosSystem {
+      surface = inputs.nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           ./configuration.nix
           ./hardware-configuration.nix
+          inputs.xremap-flake.nixosModules.default
+          ./modules/xremap
+
+          home-manager.nixosModules.home-manager {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              extraSpecialArgs = { inherit my-dotfiles; };
+              users.crocus = import ./home;
+            };
+          }
+        ];
+      };
+
+      desktop = inputs.nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./configuration.nix
+          ./hardware-configuration.nix
+          ./nvidia
           inputs.xremap-flake.nixosModules.default
           ./modules/xremap
 
