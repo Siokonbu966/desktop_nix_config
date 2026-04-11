@@ -35,7 +35,6 @@
   #   variant = "";
   # };
 
- 
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
@@ -48,6 +47,14 @@
     alsa.support32Bit = true;
     pulse.enable = true;
     wireplumber.enable = true;
+
+    extraConfig.pipewire = {
+      "context.properties" = {
+        "default.clock.rate" = 48000;
+        "default.clock.min-quantum" = 1024;
+        "default.clock.max-quantum" = 2048;
+      };
+    };
     # If you want to use JACK applications, uncomment this
     #jack.enable = true;
 

@@ -4,6 +4,29 @@
     enable = true;
     checkConfig = false;
     config = {
+      defaultWorkspace = "1";
+
+      gaps = {
+        inner = 6;
+        outer = 3;
+      };
+      colors = {
+        focused = {
+          border = "#00ffff";
+          background = "#2ca9e1";
+          text = "#000000";
+          indicator = "#2e9ef4";
+          childBorder = "#285577";
+        };
+      
+      unfocused = {
+          border = "#b0c4de";
+          background = "#778899";
+          text = "#ffffff";
+          indicator = "#b0c4de";
+          childBorder = "#2e9ef4";
+        };
+      };
       bars = [
         {
           command = "waybar";
@@ -33,6 +56,9 @@
 
       # bg
       output * bg /home/crocus/Pictures/photo/favorite/mahuyu_26_birthday.PNG fill
+      
+      default_border pixel 4
+      default_floating_border pixel 4
     '';
   };
 }
