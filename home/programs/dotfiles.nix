@@ -11,6 +11,6 @@
     "xremap".source = "${my-dotfiles}/xremap";
   };
   home.file = {
-    ".p10.zsh".source = "${my-dotfiles}/.p10k.zsh";
+    ".p10k.zsh".source = "${my-dotfiles}/.p10k.zsh";
   };
 }
