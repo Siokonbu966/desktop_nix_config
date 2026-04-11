@@ -29,6 +29,7 @@
       libnotify
       xremap
       github-copilot-cli
+      zsh-powerlevel10k
       # desktop client
       obsidian
       obs-studio
