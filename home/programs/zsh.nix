@@ -15,5 +15,9 @@
         file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
       }
     ];
+    
+    initExtra = ''
+      source ~/.p10k.zsh
+    '';
   };
 }
