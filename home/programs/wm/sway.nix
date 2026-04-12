@@ -16,15 +16,15 @@
           background = "#2ca9e1";
           text = "#000000";
           indicator = "#2e9ef4";
-          childBorder = "#285577";
+          childBorder = "#2ca9e1";
         };
       
-      unfocused = {
+        unfocused = {
           border = "#b0c4de";
           background = "#778899";
           text = "#ffffff";
           indicator = "#b0c4de";
-          childBorder = "#2e9ef4";
+          childBorder = "#285577";
         };
       };
       bars = [
