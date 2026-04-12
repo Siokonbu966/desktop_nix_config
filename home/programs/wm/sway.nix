@@ -34,6 +34,12 @@
       ];
       modifier = "Mod4";
       terminal = "ghostty";
+      input = {
+        "*" = {
+          # reverse mouse scroll
+          natural_scroll = "enabled";
+        };
+      };
     };
     extraConfig = ''
       set $mod Mod4

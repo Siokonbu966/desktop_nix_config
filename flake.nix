@@ -26,7 +26,7 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               extraSpecialArgs = { inherit my-dotfiles; };
-              users.crocus = import ./home ./hosts/surface/home;
+              users.crocus = import ./home;
             };
           }
         ];
@@ -45,7 +45,7 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               extraSpecialArgs = { inherit my-dotfiles; };
-              users.crocus = import ./home ./hosts/desktop/home;
+              users.crocus = import ./home;
             };
           }
         ];
