@@ -8,6 +8,7 @@
     ./programs/wm
     ./programs/mako.nix
     ./programs/zsh.nix
+    ./programs/default-app.nix
   ];
 
   home = rec {
