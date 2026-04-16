@@ -56,11 +56,11 @@
     "my-dotfiles": {
       "flake": false,
       "locked": {
-        "lastModified": 1775898687,
-        "narHash": "sha256-SYitMrGvekL4o2/6TsBvPEFSzmTrXW9SXK4xB4KHzZ0=",
+        "lastModified": 1776300261,
+        "narHash": "sha256-WxY7XwdV1Vp+f/OJNia3psDW/W4U0ChrGlYWEJyL/mY=",
         "owner": "Siokonbu966",
         "repo": "dotfiles",
-        "rev": "9af57bda8af0103e0f1175f773a8229937aa26bb",
+        "rev": "fdbd20f0a2503da75d157594e06b963b570c2ad1",
         "type": "github"
       },
       "original": {

@@ -11,7 +11,6 @@
       ./modules/xremap
     ];
 
-  networking.hostName = "nixos_surface";
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";

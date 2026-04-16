@@ -53,7 +53,7 @@
               users.crocus = {
                 imports = [
                   ./home
-                  ./hosts/surface/home
+                  ./hosts/desktop/home
                 ];
               };
             };
