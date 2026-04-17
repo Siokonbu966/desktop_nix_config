@@ -44,6 +44,7 @@
     extraConfig = ''
       set $mod Mod4
       bindsym mod1+space exec fuzzel
+      bindsym mod4+Tab exec swayr switch-window
 
       # Volume
       bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
@@ -59,6 +60,7 @@
       bindsym Shift+Print exec sh -c 'FILE=~/Pictures/screen_shots/$(date +%Y.%m.%d-%H:%M:%S).png; grim  "$FILE" && notify-send "Screen shot saved" "$FILE"'
 
       exec_always fcitx5
+      exec env RUST_BACKTRACE=1 RUST_LOG=swayr=debug swayrd > /tmp/swayrd.log 2>&1
 
       # bg
       output * bg /home/crocus/Pictures/photo/favorite/mahuyu_26_birthday.PNG fill

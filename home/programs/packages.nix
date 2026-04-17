@@ -4,23 +4,19 @@
   home.packages =
     (with pkgs; [
       # 25.05
-      neovim
       ghostty
       kitty
       fastfetch
       tree
-      gh
       wl-clipboard
       slurp
       btop
       tmux
-      gcc
-      python3
-      typescript
-      lua
+      lua-language-server
       luarocks
+      marksman
+      nil
       gnumake
-      nodejs_24
       pipewire
       wireplumber
       waybar
@@ -28,7 +24,6 @@
       mako
       libnotify
       xremap
-      github-copilot-cli
       zsh-powerlevel10k
       # desktop client
       obsidian
@@ -39,6 +34,22 @@
       realvnc-vnc-viewer
       kdePackages.falkon
       vlc
+      # sway
       swaybg
+      swayr
+      # hyprland
+      wofi
+      alacritty
+      # dev
+      opencode
+      pnpm
+      nodejs_24
+      gcc
+      python3
+      typescript
+      lua
+      neovim
+      clang-tools
+      gh
   ]);
 }
