@@ -1,13 +1,19 @@
-{ self, inputs, ... }:
+{ pkgs, ... }:
 {
-  flake.nixosModules.niri = { pkgs, ... }: {
-    programs.niri = {
-      enable = true;
-      packages = self.packages.${pkgs.system}.niri;
-    };
+  programs.niri = {
+    enable = true;
   };
 
-  perSystem = { pkgs, inputs, ... }: {
-    packages.niri = inputs.niri.packages.${pkgs.system}.default;
+  xdg.portal = {
+    enable = true;
+    extraPortals = [
+      pkgs.xdg-desktop-portal-wlr
+      pkgs.xdg-desktop-portal-gtk
+    ];
+    config = {
+      common = {
+        default = [ "gtk" ];
+      };
+    };
   };
 }

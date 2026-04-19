@@ -1,13 +1,24 @@
-{ ... }:
+{ config, ... }:
 {
   imports = [
     ./niri.nix
+    ./noctalia.nix
     # ./sway.nix
-  ]
+];
 
   environment.sessionVariables = {
   WLR_NO_HARDWARE_CURSORS = "1";
   NIXOS_OZONE_WL = "1";
+  };
+
+  services.greetd = {
+    enable = true;
+    settings = {
+      default_session = {
+        command = "${config.programs.niri.package}/bin/niri-session";
+        user = "crocus";
+      };
+    };
   };
 
   # Enable the X11 windowing system.

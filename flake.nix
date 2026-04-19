@@ -16,11 +16,6 @@
       url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    niri.url = "github:NixOS/nixpkgs";
-
-    wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";
-    flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
   outputs = {
@@ -28,7 +23,6 @@
     nixpkgs,
     home-manager,
     my-dotfiles,
-    flake-parts,
     ... 
   }@inputs: {
     nixosConfigurations = {
