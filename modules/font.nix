@@ -3,6 +3,7 @@
   # fonts
   fonts.packages = with pkgs; [
     nerd-fonts.meslo-lg
+    nerd-fonts.mononoki
     noto-fonts
     noto-fonts-cjk-sans
     noto-fonts-color-emoji

@@ -1,5 +1,10 @@
-{ config, lib, ... }:
+{ ... }:
 {
+  imports = [
+    ./niri.nix
+    # ./sway.nix
+  ]
+
   environment.sessionVariables = {
   WLR_NO_HARDWARE_CURSORS = "1";
   NIXOS_OZONE_WL = "1";
@@ -27,9 +32,6 @@
   # withUWSM = true;
   #};
 
-  programs.sway = {
-    enable = true;
-  };
 
   #xdg.portal = {
   #  enable = true;

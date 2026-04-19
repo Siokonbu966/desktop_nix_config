@@ -5,18 +5,32 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    
     my-dotfiles = {
       url = "github:Siokonbu966/dotfiles";
       flake = false;
     };
     xremap-flake.url = "github:xremap/nix-flake";
+    
     noctalia = {
       url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    niri.url = "github:NixOS/nixpkgs";
+
+    wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";
+    flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
-  outputs = { self, nixpkgs, home-manager, my-dotfiles, ... }@inputs: {
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    my-dotfiles,
+    flake-parts,
+    ... 
+  }@inputs: {
     nixosConfigurations = {
       surface = inputs.nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -48,6 +62,7 @@
           ./nvidia
           inputs.xremap-flake.nixosModules.default
           ./modules/xremap
+          ./modules/wm
 
           home-manager.nixosModules.home-manager {
             home-manager = {
@@ -58,6 +73,7 @@
                 imports = [
                   ./home
                   ./hosts/desktop/home
+                  inputs.noctalia.homeModules.default
                 ];
               };
             };
