@@ -10,6 +10,10 @@
       flake = false;
     };
     xremap-flake.url = "github:xremap/nix-flake";
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, my-dotfiles, ... }@inputs: {
