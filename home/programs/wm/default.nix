@@ -1,6 +1,7 @@
 {...}: {
   imports = [
-    ./hyprland.nix
     ./waybar.nix
+  # ./niri.nix
+    ./sway.nix
   ];
 }

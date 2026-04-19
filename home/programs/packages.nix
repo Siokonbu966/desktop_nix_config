@@ -40,6 +40,8 @@
       # hyprland
       wofi
       alacritty
+      # niri
+      niri
       # dev
       opencode
       pnpm
