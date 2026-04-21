@@ -51,6 +51,7 @@
 
       desktop = inputs.nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
         modules = [
           ./hosts/desktop
           ./nvidia
@@ -62,12 +63,13 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              extraSpecialArgs = { inherit my-dotfiles; };
+              extraSpecialArgs = { inherit my-dotfiles inputs; };
               users.crocus = {
                 imports = [
+                  ./home/programs/noctalia.nix
+                  inputs.noctalia.homeModules.default
                   ./home
                   ./hosts/desktop/home
-                  inputs.noctalia.homeModules.default
                 ];
               };
             };

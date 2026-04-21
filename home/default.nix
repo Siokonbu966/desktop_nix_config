@@ -9,7 +9,6 @@
     ./programs/mako.nix
     ./programs/zsh.nix
     ./programs/default-app.nix
-    ./programs/noctalia.nix
   ];
 
   home = rec {

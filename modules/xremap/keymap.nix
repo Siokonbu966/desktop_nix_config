@@ -68,6 +68,8 @@
     name = "other";
     remap = {
       Kp0 = "Shift-Equal";
+      Menu-c = "C-Space";     # IME us
+      Menu-m = "C-BackSlash"; # IME jp
     };
   }
 ]

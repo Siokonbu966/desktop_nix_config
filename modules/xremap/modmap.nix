@@ -34,12 +34,12 @@
 
       # IME切り替え用
       Slash = {
-        held = "RightMeta";
+        held = "Menu";
         alone = "j";
         free_hold = true;
       };
       z = {
-        held = "RightMeta";
+        held = "Menu";
         alone = "x";
         free_hold = true;
       };
