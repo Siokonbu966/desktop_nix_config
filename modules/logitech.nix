@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  hardware.logitech.wiress.enable = true;
+  hardware.logitech.wireless.enable = true;
 
   environment.systemPackages = [
     pkgs.solaar
