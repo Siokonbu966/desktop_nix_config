@@ -1,7 +1,25 @@
-{ config, lib, pkgs, ...}:
-{
+{ pkgs, ... }:
+let
+  kosugi-maru = pkgs.stdenv.mkDerivation  {
+    pname = "kosugi-maru";
+    version = "1.0";
+
+    src = pkgs.fetchurl {
+      url = "https://fonts.gstatic.com/s/kosugimaru/v17/0nksC9PgP_wGh21A2KeqGiTq.ttf";
+      sha256 = "139n97ymjra2pphmf79g7z8pqpibjd26i3yam7nd7aa6c7ay7yv0";
+    };
+
+    dontUnpack = true;
+
+    installPhase = ''
+      mkdir -p $out/share/fonts/truetype
+      cp $src $out/share/fonts/truetype/KosugiMaru-Regular.ttf
+    '';
+  };
+in {
   # fonts
   fonts.packages = with pkgs; [
+    kosugi-maru
     nerd-fonts.meslo-lg
     nerd-fonts.mononoki
     noto-fonts
