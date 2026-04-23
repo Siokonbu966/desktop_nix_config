@@ -2,7 +2,8 @@
 {
   programs.noctalia-shell = {
     enable = true;
-      settings = {
+    systemd.enable = true;
+    settings = {
         settingsVersion = 0;
         bar = {
           barType = "simple";
@@ -352,7 +353,7 @@
           externalMonitor = "resources || missioncenter || jdsystemmonitor || corestats || system-monitoring-center || gnome-system-monitor || plasma-systemmonitor || mate-system-monitor || ukui-system-monitor || deepin-system-monitor || pantheon-system-monitor";
         };
         noctaliaPerformance = {
-          disableWallpaper = true;
+          disableWallpaper = false;
           disableDesktopWidgets = true;
         };
         dock = {
