@@ -34,6 +34,7 @@
       realvnc-vnc-viewer
       kdePackages.falkon
       vlc
+      anki
       # sway
       swaybg
       swayr
