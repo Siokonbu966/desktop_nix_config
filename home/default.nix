@@ -10,6 +10,7 @@
     ./programs/zsh.nix
     ./programs/noctalia.nix
     ./programs/default-app.nix
+    ./programs/ghostty.nix
   ];
 
   home = rec {
