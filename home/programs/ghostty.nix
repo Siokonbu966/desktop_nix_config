@@ -1,18 +1,15 @@
 {...}:
 {
-  programs.ghostty = {
-    enable = true;
-    settings = {
-      background-opacity = 1;
-      font-family = "Mononoki Nerd Font";
-      font-family = "Kosugi Maru";
-      font-size = 17;
+  xdg.configFile."ghostty/config".text = ''
+    font-family = Mononoki Nerd Font
+    font-family = Kosugi Maru
+    font-size = 17
 
-      background-image = /home/crocus/Pictures/Wallpapers/mahuyu_26_birthday.PNG;
-      background-image-opacity = 0.2;
-      background-image-fit = cover;
+    background-image = /home/crocus/Pictures/Wallpapers/mahuyu_26_birthday.jpg
+    background-image-fit = cover
+    background-image-opacity = 0.2
+    background-opacity = 1
 
-      window-decoration = server;
-    };
-  };
+    window-decoration = none
+  '';
 }
