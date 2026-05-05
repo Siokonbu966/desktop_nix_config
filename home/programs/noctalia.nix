@@ -505,7 +505,7 @@
           backlightDeviceMappings = [ ];
         };
         colorSchemes = {
-          useWallpaperColors = false;
+          useWallpaperColors = true;
           predefinedScheme = "Rose Pine Moon";
           darkMode = true;
           schedulingMode = "off";
