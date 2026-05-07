@@ -38,6 +38,8 @@
       # sway
       swaybg
       swayr
+      swaylock
+      swayidle
       # hyprland
       wofi
       alacritty
