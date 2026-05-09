@@ -25,6 +25,8 @@
       libnotify
       xremap
       zsh-powerlevel10k
+      ghq
+      fzf
       # desktop client
       obsidian
       obs-studio
@@ -35,6 +37,7 @@
       kdePackages.falkon
       vlc
       anki
+      google-chrome
       # sway
       swaybg
       swayr

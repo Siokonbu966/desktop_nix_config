@@ -7,7 +7,7 @@
 
     background-image = /home/crocus/Pictures/Wallpapers/mahuyu_26_birthday.jpg
     background-image-fit = cover
-    background-image-opacity = 0.2
+    background-image-opacity = 0.1
     background-opacity = 1
 
     window-decoration = none

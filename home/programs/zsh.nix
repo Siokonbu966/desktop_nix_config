@@ -18,6 +18,8 @@
     
     initContent = ''
       source ~/.p10k.zsh
+      alias q='cd "$(ghq root)/$(ghq list | fzf)"'
+      alias nixc='cd ~/nixos-config/'
     '';
   };
 }
