@@ -27,6 +27,8 @@
       zsh-powerlevel10k
       ghq
       fzf
+      # utils
+      usbutils
       # desktop client
       obsidian
       obs-studio
