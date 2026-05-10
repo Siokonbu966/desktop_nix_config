@@ -24,6 +24,7 @@
 
   # bluetooth setting
   hardware.bluetooth.enable = true;
+  hardware.enableAllFirmware = true;
 
   # Set your time zone.
   time.timeZone = "Asia/Tokyo";

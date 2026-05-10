@@ -12,6 +12,12 @@
       ghq = {
         root = "~/src";
       };
+      gpg = {
+        format = "ssh";
+      };
+      pull = {
+        rebase = "false";
+      };
     };
   };
 }

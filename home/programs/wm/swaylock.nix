@@ -16,10 +16,10 @@
       # Clock
       ########################################
 
-      clock = true;
+      # clock = true;
 
-      timestr = "%H:%M";
-      datestr = "%Y-%m-%d";
+      # timestr = "%H:%M";
+      # datestr = "%Y-%m-%d";
 
       ########################################
       # Font
@@ -68,8 +68,8 @@
 
       show-failed-attempts = true;
 
-      fade-in = 0.2;
-      grace = 2;
+      # fade-in = 0.2;
+      # grace = 2;
       daemonize = true;
     };
   };

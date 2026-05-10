@@ -12,6 +12,9 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" "snd_hda_intel" ];
   boot.extraModulePackages = [ ];
+  boot.kernelParams = [
+    "usbcore.autosuspend=-1"
+  ];
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/c8f0437a-fc92-4985-bfb1-31a31a0fdf95";
