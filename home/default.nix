@@ -11,6 +11,7 @@
     ./programs/noctalia.nix
     ./programs/default-app.nix
     ./programs/ghostty.nix
+    ./programs/gtk.nix
   ];
 
   home = rec {
