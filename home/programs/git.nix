@@ -16,7 +16,7 @@
         format = "ssh";
       };
       pull = {
-        rebase = "false";
+        rebase = "true";
       };
     };
   };
