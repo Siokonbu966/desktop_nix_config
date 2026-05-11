@@ -1,4 +1,4 @@
-{...}:
+{ pkgs, config, ... }:
 {
   gtk = {
     enable = true;
@@ -10,4 +10,6 @@
       name = "Adwaita-dark";
     };
   };
+
+  gtk.gtk4.theme = config.gtk.theme;
 }
