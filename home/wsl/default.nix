@@ -1,9 +1,9 @@
-{...}: {
+{...}:
+{
   imports = [
-    ./programs/git.nix
-    ./programs/packages.nix
-    ./programs/dotfiles.nix
-  ];
+    ../programs/git.nix;
+    ./packages.nix;
+  ]
 
   home = rec {
     username = "crocus";

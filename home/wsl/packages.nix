@@ -8,7 +8,8 @@
       tree
       btop
       tmux
-      lua-language-server
+      ghq
+      fzf
       # dev
       opencode
       neovim

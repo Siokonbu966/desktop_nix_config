@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 
 {
- # Define a user account. Don't forget to set a password with ‘passwd’.
+# Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.crocus = {
     isNormalUser = true;
     description = "crocus";
@@ -9,19 +9,19 @@
       "wheel"
     ];
     packages = with pkgs; [
-    #  thunderbird
+#  thunderbird
     ];
   };
 
-  # Allow unfree packages
+# Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
+# List packages installed in system profile. To search, run:
+# $ nix search wget
   environment.systemPackages = with pkgs; [
     git
     vim
-  #  wget
+#  wget
   ];
 
   nix = {

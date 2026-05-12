@@ -41,7 +41,7 @@
               extraSpecialArgs = { inherit my-dotfiles; };
               users.crocus = {
                 imports = [
-                  ./hosts/wsl/home
+                  ./home/wsl
                 ];
               };
             };
