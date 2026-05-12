@@ -4,7 +4,6 @@
     ../programs/git.nix
     ./packages.nix
     ./dotfiles.nix
-    ./bash.nix
   ];
 
   home = rec {
