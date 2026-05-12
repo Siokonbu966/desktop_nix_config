@@ -1,9 +1,10 @@
 {...}:
 {
   imports = [
-    ../programs/git.nix;
-    ./packages.nix;
-  ]
+    ../programs/git.nix
+    ./packages.nix
+    ./dotfiles.nix
+  ];
 
   home = rec {
     username = "crocus";
