@@ -10,6 +10,6 @@
   };
   home.file = {
     ".p10k.zsh".source = "${my-dotfiles}/.p10k.zsh";
-    ".bashrc".source = ../../configs/bash/;
+    ".bashrc".source = ../../configs/bash;
   };
 }

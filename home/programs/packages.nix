@@ -40,6 +40,7 @@
       vlc
       anki
       google-chrome
+      zed-editor
       # sway
       swaybg
       swayr
@@ -52,14 +53,7 @@
       niri
       # dev
       opencode
-      pnpm
-      nodejs_24
-      gcc
-      python3
-      typescript
-      lua
       neovim
-      clang-tools
       gh
   ]);
 }
