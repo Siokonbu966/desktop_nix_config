@@ -78,7 +78,11 @@
     ];
   };
 
-  programs.zsh.enable = true;
+  programs = {
+    zsh.enable = true;
+    # Install firefox.
+    firefox.enable = true;
+  };
 
   services.udisks2.enable = true;
 
@@ -88,8 +92,6 @@
     XMODIFERS = "@im=fcitx";
   };
 
-  # Install firefox.
-  programs.firefox.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

@@ -33,6 +33,7 @@
       obsidian
       obs-studio
       vesktop
+      slack
       nemo-with-extensions
       pavucontrol
       realvnc-vnc-viewer

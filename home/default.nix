@@ -12,6 +12,7 @@
     ./programs/default-app.nix
     ./programs/ghostty.nix
     ./programs/gtk.nix
+    ./programs/nixvim
   ];
 
   home = rec {
@@ -19,4 +20,5 @@
     homeDirectory = "/home/${username}";
     stateVersion = "25.05";
   };
+  programs.home-manager.enable = true;
 }
