@@ -2,7 +2,6 @@
 
 {
   xdg.configFile = {
-    "nvim".source = "${my-dotfiles}/nvim";
     "kitty".source = "${my-dotfiles}/kitty";
     "fastfetch".source = "${my-dotfiles}/fastfetch";
     "picom".source = "${my-dotfiles}/picom.conf";

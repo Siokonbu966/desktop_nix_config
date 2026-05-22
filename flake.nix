@@ -1,30 +1,34 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.11";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     my-dotfiles = {
       url = "github:Siokonbu966/dotfiles";
       flake = false;
     };
-    xremap-flake.url = "github:xremap/nix-flake";
-
     noctalia = {
       url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixvim = {
+      url = "github:nix-community/nixvim/main";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
+    xremap-flake.url = "github:xremap/nix-flake";
   };
 
   outputs = {
     self,
     nixpkgs,
-    nixos-wsl,
     home-manager,
     my-dotfiles,
+    nixvim,
+    nixos-wsl,
     ...
   }@inputs: {
     nixosConfigurations = {
@@ -90,7 +94,13 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              extraSpecialArgs = { inherit my-dotfiles inputs; };
+              extraSpecialArgs = {
+                inherit
+                  my-dotfiles
+                  inputs
+                  ;
+                nixvim-module = nixvim.homeModules.nixvim;
+              };
               users.crocus = {
                 imports = [
                   ./home/programs/noctalia.nix

@@ -54,7 +54,6 @@
       niri
       # dev
       opencode
-      neovim
       gh
-  ]);
+    ]);
 }
