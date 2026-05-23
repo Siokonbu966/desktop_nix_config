@@ -1,5 +1,0 @@
-{ ... }:
-
-{
-  plugins.presence.enable = true;
-}
