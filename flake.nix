@@ -46,7 +46,10 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              extraSpecialArgs = { inherit my-dotfiles; };
+              extraSpecialArgs = {
+                inherit my-dotfiles;
+                nixvim-module = nixvim.homeModules.nixvim;
+              };
               users.crocus = {
                 imports = [
                   ./home/wsl
@@ -68,7 +71,10 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              extraSpecialArgs = { inherit my-dotfiles; };
+              extraSpecialArgs = {
+                inherit my-dotfiles;
+                nixvim-module = nixvim.homeModules.nixvim;
+              };
               users.crocus = {
                 imports = [
                   ./home
