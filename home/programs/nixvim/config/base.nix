@@ -1,0 +1,8 @@
+{ ... }:
+
+{
+  globals = {
+    mapleader = " ";
+    maplocalleader = "\\";
+  };
+}
