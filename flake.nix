@@ -47,7 +47,8 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               extraSpecialArgs = {
-                inherit my-dotfiles;
+                inherit my-dotfiles
+                inputs;
                 nixvim-module = nixvim.homeModules.nixvim;
               };
               users.crocus = {
@@ -109,7 +110,6 @@
               };
               users.crocus = {
                 imports = [
-                  ./home/programs/noctalia.nix
                   inputs.noctalia.homeModules.default
                   ./home
                   ./hosts/desktop/home

@@ -12,7 +12,6 @@
       fzf
       # dev
       opencode
-      neovim
       gh
   ]);
 }
