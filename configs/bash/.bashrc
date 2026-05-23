@@ -29,7 +29,7 @@ git_ps1_or_x() {
 }
 
 # プロンプト
-PS1="${WHITE}<\t>${GREEN}\u@\h${RESET}: ${CYAN} \w${RESET} ${BLUE}\$(git_ps1_or_x)${RESET}\n${WHITE}\$ ${RESET}"
+PS1="${WHITE}<\t> ${BLUE}  ${CYAN} \w${RESET} ${GREEN}\$(git_ps1_or_x)${RESET}\n${WHITE}\$ ${RESET}"
 
 # alias
 alias q='cd "$(ghq root)/$(ghq list | fzf)"'
