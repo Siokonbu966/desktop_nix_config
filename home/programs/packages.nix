@@ -42,6 +42,8 @@
       anki
       google-chrome
       zed-editor
+      osu-lazer
+      prismlauncher
       # sway
       swaybg
       swayr
