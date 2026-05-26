@@ -11,8 +11,6 @@
       wl-clipboard
       slurp
       btop
-      tmux
-      lua-language-server
       luarocks
       marksman
       nil
