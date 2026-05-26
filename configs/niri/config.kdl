@@ -109,11 +109,19 @@ input {
 output "DP-3" {
   variable-refresh-rate
   focus-at-startup
+
+  layout {
+    default-column-width { proportion 0.5; }
+  }
 }
 
 output "HDMI-A-1" {
   transform "90"
   position x=0 y=0
+
+  layout {
+    default-column-width { proportion 1.0; }
+  }
 }
 
 // Settings that influence how windows are positioned and sized.
@@ -139,6 +147,7 @@ layout {
         proportion 0.33333
         proportion 0.5
         proportion 0.66667
+        proportion 1.0
 
         // Fixed sets the width in logical pixels exactly.
         // fixed 1920
