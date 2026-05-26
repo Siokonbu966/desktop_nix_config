@@ -2,7 +2,6 @@
   imports = [
     ./programs/packages.nix
     ./programs/dotfiles.nix
-    ./programs/fuzzel.nix
     ./programs/udisk.nix
     ./programs/wm
     ./programs/zsh.nix

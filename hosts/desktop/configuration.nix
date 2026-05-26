@@ -1,4 +1,4 @@
-{...}:
+{ config, ... }:
 {
   imports = [
     ../../configuration.nix
@@ -11,4 +11,8 @@
     address = "192.168.0.19";
     prefixLength = 24;
   }];
+
+  programs.obs-studio.enableVirtualCamera = true;
+
+  boot.kernelModules = [ "v4l2loopback" ];
 }

@@ -31,7 +31,6 @@
       usbutils
       # desktop client
       obsidian
-      obs-studio
       vesktop
       slack
       nemo-with-extensions
@@ -55,7 +54,6 @@
       # niri
       niri
       # dev
-      opencode
       gh
     ]);
 }
