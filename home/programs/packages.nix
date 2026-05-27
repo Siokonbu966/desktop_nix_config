@@ -41,6 +41,7 @@
       zed-editor
       osu-lazer
       prismlauncher
+      gimp
       # sway
       swaybg
       swayr

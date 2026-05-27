@@ -4,11 +4,10 @@
     ./programs/dotfiles.nix
     ./programs/udisk.nix
     ./programs/wm
-    ./programs/zsh.nix
-    ./programs/ghostty.nix
     ./programs/nixvim
     ./programs/gui
     ./programs/dev
+    ./programs/terminal
   ];
 
   home = rec {
