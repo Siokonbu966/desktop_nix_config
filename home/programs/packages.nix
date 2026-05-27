@@ -11,16 +11,12 @@
       wl-clipboard
       slurp
       btop
-      luarocks
-      marksman
       nil
       gnumake
       pipewire
       wireplumber
-      waybar
       grim
       mako
-      libnotify
       xremap
       zsh-powerlevel10k
       ghq
@@ -31,7 +27,6 @@
       obsidian
       vesktop
       slack
-      nemo-with-extensions
       pavucontrol
       realvnc-vnc-viewer
       kdePackages.falkon
@@ -42,6 +37,7 @@
       osu-lazer
       prismlauncher
       gimp
+      nautilus
       # sway
       swaybg
       swayr
