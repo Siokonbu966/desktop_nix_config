@@ -18,6 +18,7 @@
       pull = {
         rebase = "true";
       };
+      core.editor = "vi";
     };
   };
 }
