@@ -18,6 +18,10 @@
       url = "github:nix-community/nixvim/main";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-ld = {
+      url = "github:Mic92/nix-ld";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
     xremap-flake.url = "github:xremap/nix-flake";
   };
@@ -28,6 +32,7 @@
     home-manager,
     my-dotfiles,
     nixvim,
+    nix-ld,
     nixos-wsl,
     ...
   }@inputs: {
@@ -40,6 +45,8 @@
             system.stateVersion = "25.05";
             wsl.enable = true;
           }
+          nix-ld.nixosModules.nix-ld
+          { programs.nix-ld.dev.enable = true; }
           ./hosts/wsl
 
           home-manager.nixosModules.home-manager {
@@ -67,6 +74,8 @@
           ./hosts/surface
           inputs.xremap-flake.nixosModules.default
           ./modules/xremap
+          nix-ld.nixosModules.nix-ld
+          { programs.nix-ld.dev.enable = true; }
 
           home-manager.nixosModules.home-manager {
             home-manager = {
@@ -96,6 +105,8 @@
           inputs.xremap-flake.nixosModules.default
           ./modules/xremap
           ./modules/wm
+          nix-ld.nixosModules.nix-ld
+          { programs.nix-ld.dev.enable = true; }
 
           home-manager.nixosModules.home-manager {
             home-manager = {
