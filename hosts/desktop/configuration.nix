@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 {
   imports = [
     ../../configuration.nix
@@ -13,6 +13,14 @@
   }];
 
   programs.obs-studio.enableVirtualCamera = true;
+
+  # vmware
+  virtualisation.vmware.host.enable = true;
+  services.xserver.videoDrivers = [ "vmware" ];
+
+  environment.systemPackages = with pkgs; [
+    xwayland-satellite
+  ];
 
   boot.kernelModules = [ "v4l2loopback" ];
 }

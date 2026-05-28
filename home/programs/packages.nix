@@ -38,6 +38,7 @@
       prismlauncher
       gimp
       nautilus
+      lmstudio
       # sway
       swaybg
       swayr
