@@ -55,9 +55,9 @@
             extraSpecialArgs = {
               inherit
                 inputs
-                self
               ;
               nixvim-module = nixvim.homeModules.nixvim;
+              device = "mac";
             };
             users.crocus = import ./home/mac.nix;
           };
@@ -84,8 +84,11 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               extraSpecialArgs = {
-                inherit my-dotfiles
-                inputs;
+                inherit 
+                  my-dotfiles
+                  inputs
+                ;
+                device = "wsl";
                 nixvim-module = nixvim.homeModules.nixvim;
               };
               users.crocus = {
@@ -146,7 +149,8 @@
                 inherit
                   my-dotfiles
                   inputs
-                  ;
+                ;
+                device = "desktop";
                 nixvim-module = nixvim.homeModules.nixvim;
               };
               users.crocus = {
