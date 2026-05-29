@@ -21,6 +21,7 @@
       alias q='cd "$(ghq root)/$(ghq list | fzf)"'
       alias nixc='cd ~/nixos-config/'
       alias initpart='nix flake init -t github:hercules-ci/flake-parts'
+      zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
     '';
   };
 }
