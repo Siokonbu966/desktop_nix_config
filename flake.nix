@@ -22,6 +22,10 @@
       url = "github:Mic92/nix-ld";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-darwin = {
+      url = "github:nix-darwin/nix-darwin/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
     xremap-flake.url = "github:xremap/nix-flake";
   };
@@ -32,10 +36,36 @@
     home-manager,
     my-dotfiles,
     nixvim,
+    nix-darwin,
     nix-ld,
     nixos-wsl,
     ...
-  }@inputs: {
+  }@inputs:
+  {
+    darwinConfigurations."mac" = nix-darwin.lib.darwinSystem {
+      specialArgs = { inherit self; };
+      modules = [ 
+        ./darwin
+        home-manager.darwinModules.home-manager
+        {
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            backupFileExtension = "backup";
+            extraSpecialArgs = {
+              inherit
+                inputs
+              ;
+              nixvim-module = nixvim.homeModules.nixvim;
+              device = "mac";
+            };
+            users.crocus = import ./home/mac.nix;
+          };
+          nixpkgs.config.allowUnfree = true;
+        }
+      ];
+    };
+
     nixosConfigurations = {
       wsl = inputs.nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -54,8 +84,11 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               extraSpecialArgs = {
-                inherit my-dotfiles
-                inputs;
+                inherit 
+                  my-dotfiles
+                  inputs
+                ;
+                device = "wsl";
                 nixvim-module = nixvim.homeModules.nixvim;
               };
               users.crocus = {
@@ -116,7 +149,8 @@
                 inherit
                   my-dotfiles
                   inputs
-                  ;
+                ;
+                device = "desktop";
                 nixvim-module = nixvim.homeModules.nixvim;
               };
               users.crocus = {
