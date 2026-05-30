@@ -150,7 +150,7 @@
           smoothScrollEnabled = true;
         };
         ui = {
-          fontDefault = "Mononoki Nerd Font";
+          fontDefault = "Noto Sans CJK JP";
           fontFixed = "";
           fontDefaultScale = 1;
           fontFixedScale = 1;
