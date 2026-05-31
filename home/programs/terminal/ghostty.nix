@@ -21,6 +21,7 @@ in
     font-size = 17
 
     working-directory = home
+    window-inherit-working-directory = false
 
     ${deviceConfig}
   '';
