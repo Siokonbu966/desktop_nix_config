@@ -1,10 +1,10 @@
 {...}:
 {
   imports = [
-    ../programs/git.nix
-    ../programs/nixvim
-    ./packages.nix
-    ./dotfiles.nix
+    ./programs/cli
+    ./programs/nixvim
+    ./programs/packages.nix
+    ./programs/utils/dotfiles.nix
   ];
 
   home = rec {

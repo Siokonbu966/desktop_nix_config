@@ -45,7 +45,7 @@
     darwinConfigurations."mac" = nix-darwin.lib.darwinSystem {
       specialArgs = { inherit self; };
       modules = [ 
-        ./darwin
+        ./host/mac
         home-manager.darwinModules.home-manager
         {
           home-manager = {
@@ -93,7 +93,7 @@
               };
               users.crocus = {
                 imports = [
-                  ./home/wsl
+                  ./home/wsl.nix
                 ];
               };
             };
