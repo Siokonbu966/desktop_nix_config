@@ -5,5 +5,6 @@
     ./udisk.nix
     ./dotfiles.nix
     ./default-app.nix
+    ./nh.nix
   ];
 }

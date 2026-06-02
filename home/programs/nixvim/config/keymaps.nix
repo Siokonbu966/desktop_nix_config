@@ -68,5 +68,11 @@
       action = "<cmd>Diffview<CR>";
       options = { desc = "コンフリクト解消画面表示"; };
     }
+    {
+      mode = "n";
+      key = "M-b";
+      action = "<cmd>bdelete %d<CR>";
+      options = { desc = "close current buffer"; };
+    }
   ];
 }

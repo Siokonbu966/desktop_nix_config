@@ -5,6 +5,7 @@
     ./programs/nixvim
     ./programs/packages.nix
     ./programs/utils/dotfiles.nix
+    ./programs/utils/nh.nix
   ];
 
   home = rec {

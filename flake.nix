@@ -74,6 +74,7 @@
           {
             system.stateVersion = "25.05";
             wsl.enable = true;
+            wsl.defaultUser = "crocus";
           }
           nix-ld.nixosModules.nix-ld
           { programs.nix-ld.dev.enable = true; }
