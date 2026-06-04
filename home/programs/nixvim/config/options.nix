@@ -13,6 +13,8 @@
     conceallevel = 0;
     termguicolors = true;
     completeopt = [ "menu" "menuone" "noinsert" ];
+    cursorline = true;
+    cursorcolumn = true;
   };
 
   clipboard = {
