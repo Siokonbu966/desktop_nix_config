@@ -52,6 +52,7 @@ in
       tmux
       ghq
       fzf
+      ripgrep
       # dev
       opencode
       gh
