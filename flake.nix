@@ -45,7 +45,7 @@
     darwinConfigurations."mac" = nix-darwin.lib.darwinSystem {
       specialArgs = { inherit self; };
       modules = [ 
-        ./host/mac
+        ./hosts/mac
         home-manager.darwinModules.home-manager
         {
           home-manager = {
@@ -55,6 +55,7 @@
             extraSpecialArgs = {
               inherit
                 inputs
+                my-dotfiles
               ;
               nixvim-module = nixvim.homeModules.nixvim;
               device = "mac";

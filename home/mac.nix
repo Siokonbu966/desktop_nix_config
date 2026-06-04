@@ -3,6 +3,7 @@
   imports = [
     ./programs/nixvim
     ./programs/cli
+    ./programs/gui/ghostty.nix
     ./programs/utils/nh.nix
     ./programs/utils/dotfiles.nix
   ];
