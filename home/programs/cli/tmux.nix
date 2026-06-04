@@ -2,7 +2,7 @@
   programs.tmux = {
     enable = true;
     keyMode = "vi";
-    terminal = "xterm-ghostty";
+    terminal = "xterm-256color";
     mouse = true;
     extraConfig = ''
       set -g status-style 'bg=colour062,fg=colour045'
