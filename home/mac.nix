@@ -1,9 +1,12 @@
 {...}:
 {
   imports = [
-    ./programs/dev
     ./programs/nixvim
-    ./programs/terminal
+    ./programs/cli
+    ./programs/gui/ghostty.nix
+    ./programs/utils/nh.nix
+    ./programs/utils/dotfiles.nix
+    ./programs/packages.nix
   ];
 
   home = rec {

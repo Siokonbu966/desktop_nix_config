@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ pkgs, ... }:
 
 {
 # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -8,6 +8,7 @@
     extraGroups = [
       "wheel"
     ];
+    shell = pkgs.zsh;
     packages = with pkgs; [
 #  thunderbird
     ];
@@ -15,6 +16,8 @@
 
 # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+  
+  programs.zsh.enable = true;
 
 # List packages installed in system profile. To search, run:
 # $ nix search wget
@@ -29,5 +32,4 @@
       experimental-features = ["nix-command" "flakes"];
     };
   };
-
 }

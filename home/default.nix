@@ -1,13 +1,11 @@
 {...}: {
   imports = [
     ./programs/packages.nix
-    ./programs/dotfiles.nix
-    ./programs/udisk.nix
+    ./programs/utils
     ./programs/wm
     ./programs/nixvim
     ./programs/gui
-    ./programs/dev
-    ./programs/terminal
+    ./programs/cli
   ];
 
   home = rec {

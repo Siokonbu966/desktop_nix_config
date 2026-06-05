@@ -45,7 +45,7 @@
     darwinConfigurations."mac" = nix-darwin.lib.darwinSystem {
       specialArgs = { inherit self; };
       modules = [ 
-        ./darwin
+        ./hosts/mac
         home-manager.darwinModules.home-manager
         {
           home-manager = {
@@ -55,6 +55,7 @@
             extraSpecialArgs = {
               inherit
                 inputs
+                my-dotfiles
               ;
               nixvim-module = nixvim.homeModules.nixvim;
               device = "mac";
@@ -74,6 +75,7 @@
           {
             system.stateVersion = "25.05";
             wsl.enable = true;
+            wsl.defaultUser = "crocus";
           }
           nix-ld.nixosModules.nix-ld
           { programs.nix-ld.dev.enable = true; }
@@ -93,7 +95,7 @@
               };
               users.crocus = {
                 imports = [
-                  ./home/wsl
+                  ./home/wsl.nix
                 ];
               };
             };

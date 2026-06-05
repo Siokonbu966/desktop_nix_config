@@ -5,6 +5,7 @@
     ./lualine.nix
     ./mini.nix
     ./oil.nix
+    ./render-markdown.nix
     ./telescope.nix
   ];
 }
