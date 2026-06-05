@@ -159,7 +159,6 @@
                 imports = [
                   inputs.noctalia.homeModules.default
                   ./home
-                  ./hosts/desktop/home
                 ];
               };
             };
