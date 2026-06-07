@@ -40,6 +40,39 @@ let
     alacritty
     # niri
    niri
+  ]) else if device == "surface" then (with pkgs; [
+    ghostty
+    kitty
+    slurp
+    nil
+    gnumake
+    # utils
+    usbutils
+    mako
+    pipewire
+    wireplumber
+    grim
+    wl-clipboard
+    xremap
+    # desktop client
+    obsidian
+    vesktop
+    slack
+    pavucontrol
+    realvnc-vnc-viewer
+    kdePackages.falkon
+    vlc
+    anki
+    google-chrome
+    zed-editor
+    prismlauncher
+    gimp
+    nautilus
+    # sway
+    swaybg
+    swayr
+    swaylock
+    swayidle
   ]) else [];
 in
 {

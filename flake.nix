@@ -118,12 +118,12 @@
               useUserPackages = true;
               extraSpecialArgs = {
                 inherit my-dotfiles;
+                device = "surface";
                 nixvim-module = nixvim.homeModules.nixvim;
               };
               users.crocus = {
                 imports = [
-                  ./home
-                  ./hosts/surface/home
+                  ./home/surface.nix
                 ];
               };
             };

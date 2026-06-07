@@ -1,8 +1,13 @@
+{ device ? "surface", ...}:
+let
+  device_gui = if device == "desktop" then [
+    ./noctalia.nix
+  ] else [];
+in
 {
   imports = [
     ./fuzzel.nix
-    ./noctalia.nix
     ./obs.nix
     ./ghostty.nix
-  ];
+  ] ++ device_gui;
 }
