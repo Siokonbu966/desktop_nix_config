@@ -42,7 +42,6 @@ let
    niri
   ]) else if device == "surface" then (with pkgs; [
     ghostty
-    kitty
     slurp
     nil
     gnumake
@@ -56,17 +55,11 @@ let
     xremap
     # desktop client
     obsidian
-    vesktop
-    slack
     pavucontrol
     realvnc-vnc-viewer
     kdePackages.falkon
     vlc
-    anki
-    google-chrome
     zed-editor
-    prismlauncher
-    gimp
     nautilus
     # sway
     swaybg

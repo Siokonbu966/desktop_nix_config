@@ -1,8 +1,15 @@
-{...}:
+{ lib, ...}:
+let
+  modifier = "mod4";
+  menu = "fuzzel";
+  terminal = "ghostty";
+in
 {
   wayland.windowManager.sway = {
     enable = true;
     checkConfig = false;
+    xwayland = true;
+    systemd.enable = true;
     config = {
       defaultWorkspace = "1";
 
@@ -18,22 +25,29 @@
           indicator = "#2e9ef4";
           childBorder = "#2ca9e1";
         };
-      
-        unfocused = {
-          border = "#b0c4de";
-          background = "#778899";
-          text = "#ffffff";
-          indicator = "#b0c4de";
-          childBorder = "#285577";
-        };
+        # unfocused = {
+        #   border = "#b0c4de";
+        #   background = "#778899";
+        #   text = "#ffffff";
+        #   indicator = "#b0c4de";
+        #   childBorder = "#285577";
+        # };
       };
       bars = [
         {
           command = "waybar";
         }
       ];
-      modifier = "Mod4";
-      terminal = "ghostty";
+      modifier = "${modifier}";
+      keybindings = 
+        lib.mkOptionDefault {
+          "${modifier}+t" = "exec ${terminal}";
+          "${modifier}+Shift+q" = "kill";
+          "${modifier}+d" = "exec ${menu}";
+          "${modifier}+Shift+p" = "exec systemctl suspend";
+        };
+      terminal = "${terminal}";
+      menu = "${menu}";
       input = {
         "*" = {
           # reverse mouse scroll
@@ -42,10 +56,6 @@
       };
     };
     extraConfig = ''
-      set $mod Mod4
-      bindsym mod1+space exec fuzzel
-      bindsym mod4+Tab exec swayr switch-window
-
       # Volume
       bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
       bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
@@ -63,7 +73,7 @@
       exec env RUST_BACKTRACE=1 RUST_LOG=swayr=debug swayrd > /tmp/swayrd.log 2>&1
 
       # bg
-      output * bg /home/crocus/Pictures/photo/favorite/mahuyu_26_birthday.PNG fill
+      output "*" background /home/crocus/Pictures/photo/wallpapers/splatoon_10th_02.jpg fill
       
       default_border pixel 4
       default_floating_border pixel 4
