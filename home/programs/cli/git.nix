@@ -5,6 +5,7 @@
       user = {
         name = "Siokonbu966";
         email = "167207736+Siokonbu966@users.noreply.github.com";
+        signingkey = "~/.ssh/github.pub";
       };
       init = {
         defaultBranch = "main";

@@ -3,7 +3,7 @@
     enable = true;
     keyMode = "vi";
     terminal = "xterm-256color";
-    prefix = "C-k";
+    prefix = "C-g";
     mouse = true;
     extraConfig = ''
       set -g status-style 'bg=colour062,fg=colour045'
