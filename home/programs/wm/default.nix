@@ -9,7 +9,15 @@ in
 {
   imports = [
     ./waybar.nix
+<<<<<<< Updated upstream
     ./swayidle.nix
     ./swaylock.nix
   ] ++ device_wm;
+=======
+    # ./niri.nix
+    ./swayidle.nix
+    ./swaylock.nix
+    ./sway.nix
+  ];
+>>>>>>> Stashed changes
 }
