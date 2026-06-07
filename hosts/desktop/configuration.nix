@@ -18,6 +18,8 @@
   virtualisation.vmware.host.enable = true;
   services.xserver.videoDrivers = [ "vmware" ];
 
+  services.tailscale.enable = true;
+
   environment.systemPackages = with pkgs; [
     xwayland-satellite
   ];
