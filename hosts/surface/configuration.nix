@@ -11,7 +11,7 @@
 
   hardware.graphics.enable = true;
 
-  networking.hostName = "nixos-surface";
+  networking.hostName = "coccineus";
   networking.interfaces.enp0s20f0u1u1u4.ipv4.addresses = [{
     address = "192.168.0.18";
     prefixLength = 24;
