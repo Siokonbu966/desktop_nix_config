@@ -151,7 +151,7 @@
         };
         ui = {
           fontDefault = "Noto Sans CJK JP";
-          fontFixed = "";
+          fontFixed = "Noto Sans Mono CJK JP";
           fontDefaultScale = 1;
           fontFixedScale = 1;
           tooltipsEnabled = true;
