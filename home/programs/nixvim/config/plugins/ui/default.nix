@@ -7,5 +7,6 @@
     ./oil.nix
     ./render-markdown.nix
     ./telescope.nix
+    ./tiny-inline-diagnostic.nix
   ];
 }
