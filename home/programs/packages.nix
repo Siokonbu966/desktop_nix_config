@@ -30,6 +30,7 @@ let
     gimp
     nautilus
     lmstudio
+    signal-desktop
     # sway
     swaybg
     swayr
