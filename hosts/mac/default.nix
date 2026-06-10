@@ -1,5 +1,9 @@
 { self, pkgs, ... }:
 {
+  imports = [
+    ./brew.nix
+  ];
+
   environment.systemPackages = with pkgs; [
     vim
   ];
@@ -15,22 +19,8 @@
 
   # The platform the configuration will be used on.
   nixpkgs.hostPlatform = "aarch64-darwin";
+  system.primaryUser = "crocus";
   nixpkgs.config.allowUnfree = true;
-
-  homebrew = {
-    enable = true;
-    casks = [
-      "firefox"
-      "obsidian"
-      "ghostty"
-      "loop"
-      "karabiner-elements"
-    ];
-    onActivation = {
-      autoUpdate = false;
-      cleanup = "zap";
-    };
-  };
 
   security.pam.services.sudo_local = {
     touchIdAuth = true;
