@@ -17,6 +17,21 @@
   nixpkgs.hostPlatform = "aarch64-darwin";
   nixpkgs.config.allowUnfree = true;
 
+  homebrew = {
+    enable = true;
+    casks = [
+      "firefox"
+      "obsidian"
+      "ghostty"
+      "loop"
+      "karabiner-elements"
+    ];
+    onActivation = {
+      autoUpdate = false;
+      cleanup = "zap";
+    };
+  };
+
   security.pam.services.sudo_local = {
     touchIdAuth = true;
     reattach = true;
