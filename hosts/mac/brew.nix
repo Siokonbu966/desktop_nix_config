@@ -10,6 +10,7 @@
       "discord"
       "slack"
       "google-chrome"
+      "lm-studio"
     ];
     onActivation = {
       autoUpdate = false;
