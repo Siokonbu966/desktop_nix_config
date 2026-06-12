@@ -80,8 +80,5 @@ in
       ghq
       fzf
       ripgrep
-      # dev
-      opencode
-      gh
     ]) ++ device_conf;
 }
