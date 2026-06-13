@@ -11,6 +11,7 @@
       "slack"
       "google-chrome"
       "lm-studio"
+      "tailscale"
     ];
     onActivation = {
       autoUpdate = false;
