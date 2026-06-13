@@ -25,6 +25,20 @@
             };
           };
       };
+      sourcekit = {
+        enable = true;
+        ## cmd = {
+        ##   'sourcekit-lsp',
+        ##   '-Xswiftc',
+        ##   '-sdk',
+        ##   '-Xswiftc',
+        ##   '/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk',
+        ##   '-Xswiftc',
+        ##   '-target',
+        ##   '-Xswiftc',
+        ##   'x86_64-apple-ios17.5-simulator',
+        ## };
+      };
       eslint.enable = true;
       ts_ls.enable = true;
       cssls.enable = true;
