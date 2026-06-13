@@ -70,8 +70,8 @@
     }
     {
       mode = "n";
-      key = "M-b";
-      action = "<cmd>bdelete %d<CR>";
+      key = "tc";
+      action = "<cmd>bdelete<CR>";
       options = { desc = "close current buffer"; };
     }
   ];
