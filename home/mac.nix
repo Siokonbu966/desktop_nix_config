@@ -12,6 +12,6 @@
   home = rec {
     username = "crocus";
     homeDirectory = "/Users/${username}";
-    stateVersion = "25.05";
+    stateVersion = "26.05";
   };
 }
