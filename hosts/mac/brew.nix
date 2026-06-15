@@ -13,6 +13,7 @@
       "lm-studio"
       "tailscale"
       "alt-tab"
+      "prismlauncher"
     ];
     onActivation = {
       autoUpdate = false;
