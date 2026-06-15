@@ -12,6 +12,7 @@
       "google-chrome"
       "lm-studio"
       "tailscale"
+      "alt-tab"
     ];
     onActivation = {
       autoUpdate = false;
