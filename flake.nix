@@ -110,7 +110,7 @@
         modules = [
           nixos-wsl.nixosModules.default
           {
-            system.stateVersion = "25.05";
+            system.stateVersion = "26.05";
             wsl.enable = true;
             wsl.defaultUser = "crocus";
           }
