@@ -14,6 +14,8 @@
       "tailscale"
       "alt-tab"
       "prismlauncher"
+      "appcleaner"
+      "vscodium"
     ];
     onActivation = {
       autoUpdate = false;
