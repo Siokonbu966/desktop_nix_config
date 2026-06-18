@@ -6,5 +6,6 @@
     ./tmux.nix
     ./zsh.nix
     ./yazi.nix
+    ./gh.nix
   ];
 }
