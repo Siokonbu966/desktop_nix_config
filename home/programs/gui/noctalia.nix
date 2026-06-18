@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 {
   programs.noctalia-shell = {
     enable = true;
@@ -198,7 +198,7 @@
         wallpaper = {
           enabled = true;
           overviewEnabled = false;
-          directory = "";
+          directory = "~/Pictures/Wallpapers";
           monitorDirectories = [ ];
           enableMultiMonitorDirectories = false;
           showHiddenFiles = false;
@@ -357,7 +357,7 @@
           disableDesktopWidgets = true;
         };
         dock = {
-          enabled = true;
+          enabled = false;
           position = "bottom";
           displayMode = "auto_hide";
           dockType = "floating";
