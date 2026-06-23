@@ -1,6 +1,40 @@
 { ... }:
 
 {
+  opts.updatetime = 300;
+  autoCmd = [
+    {
+      event = [ "CursorHold" ];
+      callback.__raw = ''
+        function()
+          vim.diagnostic.open_float(nil, {
+            focusable = false,
+            close_events = {
+              "BufLeave",
+              "CursorMoved",
+              "InsertEnter",
+              "FocusLost",
+            },
+            border = "rounded",
+            source = "if_many",
+            prefix = " ",
+            scope = "cursor",
+          })
+        end
+      '';
+    }
+    {
+      event = [ "CursorHold" ];
+      callback.__raw = ''
+        function()
+          vim.lsp.buf.hover({
+            border = "rounded",
+            focusable = false,
+          })
+        end
+      '';
+    }
+  ];
   extraConfigLua = ''
     vim.diagnostic.handlers["my/notify"] = {
       show = function(namespace, bufnr, diagnostics, opts)
