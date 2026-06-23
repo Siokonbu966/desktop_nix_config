@@ -117,6 +117,7 @@
           nix-ld.nixosModules.nix-ld
           { programs.nix-ld.dev.enable = true; }
           ./hosts/wsl
+          ./modules/font.nix
 
           home-manager.nixosModules.home-manager {
             home-manager = {
