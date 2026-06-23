@@ -13,7 +13,6 @@
       "lm-studio"
       "tailscale"
       "alt-tab"
-      "prismlauncher"
       "appcleaner"
       "vscodium"
     ];
