@@ -1,7 +1,7 @@
 {...}:
 {
   programs.opencode = {
-    enable = false;
+    enable = true;
     settings = {
       permission = {
         websearch = "allow";
