@@ -18,7 +18,6 @@
     ];
     onActivation = {
       autoUpdate = false;
-      cleanup = "zap";
     };
   };
 }
