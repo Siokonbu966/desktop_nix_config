@@ -11,7 +11,7 @@
       "slack"
       "google-chrome"
       "lm-studio"
-      "tailscale"
+      "tailscale-app"
       "alt-tab"
       "appcleaner"
       "vscodium"
