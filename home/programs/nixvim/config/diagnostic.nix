@@ -2,39 +2,39 @@
 
 {
   opts.updatetime = 300;
-  autoCmd = [
-    {
-      event = [ "CursorHold" ];
-      callback.__raw = ''
-        function()
-          vim.diagnostic.open_float(nil, {
-            focusable = false,
-            close_events = {
-              "BufLeave",
-              "CursorMoved",
-              "InsertEnter",
-              "FocusLost",
-            },
-            border = "rounded",
-            source = "if_many",
-            prefix = " ",
-            scope = "cursor",
-          })
-        end
-      '';
-    }
-    {
-      event = [ "CursorHold" ];
-      callback.__raw = ''
-        function()
-          vim.lsp.buf.hover({
-            border = "rounded",
-            focusable = false,
-          })
-        end
-      '';
-    }
-  ];
+  #autoCmd = [
+  #  {
+  #    event = [ "CursorHold" ];
+  #    callback.__raw = ''
+  #      function()
+  #        vim.diagnostic.open_float(nil, {
+  #          focusable = false,
+  #          close_events = {
+  #            "BufLeave",
+  #            "CursorMoved",
+  #            "InsertEnter",
+  #            "FocusLost",
+  #          },
+  #          border = "rounded",
+  #          source = "if_many",
+  #          prefix = " ",
+  #          scope = "cursor",
+  #        })
+  #      end
+  #    '';
+  #  }
+  #  {
+  #    event = [ "CursorHold" ];
+  #    callback.__raw = ''
+  #      function()
+  #        vim.lsp.buf.hover({
+  #          border = "rounded",
+  #          focusable = false,
+  #        })
+  #      end
+  #    '';
+  #  }
+  #];
   extraConfigLua = ''
     vim.diagnostic.handlers["my/notify"] = {
       show = function(namespace, bufnr, diagnostics, opts)
@@ -52,6 +52,21 @@
         virtual_text = true,
       },
     })
+
+    vim.keymap.set("n", "do", function()
+      vim.diagnostic.open_float(nil, {
+        focusable = false,
+        close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" },
+        border = "rounded",
+        source = "if_many",
+        prefix = " ",
+        scope = "cursor",
+      })
+      vim.lsp.buf.hover({
+        border = "rounded",
+        focusable = false,
+      })
+    end, { desc = "Show diagnostic float and LSP hover" })
 
     vim.keymap.set("n", "gK", function()
       local new_config = not vim.diagnostic.config().virtual_lines
