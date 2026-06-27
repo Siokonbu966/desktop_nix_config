@@ -7,13 +7,14 @@ let
     # background-image-fit = cover
     # background-image-opacity = 0.1
     background-opacity = 0.7
+    background-blur = 20
   '' else if device == "mac" then ''
     font-size = 17
     macos-titlebar-style = hidden
-    background-image = /Users/crocus/works/Wallpapers/cho-kaguya_concept01c.png
-    background-image-fit = cover
-    background-image-opacity = 0.1
-    # background-opacity = 0.7
+    # background-image = /Users/crocus/works/Wallpapers/cho-kaguya_concept01c.png
+    # background-image-fit = cover
+    # background-image-opacity = 0.1
+    background-opacity = 0.8
   '' else if device == "surface" then ''
     font-size = 12
   '' else '''';
