@@ -15,6 +15,7 @@
       "alt-tab"
       "appcleaner"
       "vscodium"
+      "whatcable"
     ];
     onActivation = {
       autoUpdate = false;
