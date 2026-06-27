@@ -31,6 +31,8 @@ let
     nautilus
     lmstudio
     signal-desktop
+    qtractor
+    lmms
     # sway
     swaybg
     swayr
