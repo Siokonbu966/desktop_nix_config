@@ -82,5 +82,8 @@ in
       ghq
       fzf
       ripgrep
+      docker
+      docker-compose
+      colima
     ]) ++ device_conf;
 }
