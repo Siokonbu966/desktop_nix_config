@@ -25,6 +25,7 @@ let
     anki
     google-chrome
     zed-editor
+    vscodium
     osu-lazer
     prismlauncher
     gimp
