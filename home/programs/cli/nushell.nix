@@ -4,7 +4,7 @@
     enable = true;
 
     shellAliases = {
-      q = ''cd $"(ghq root)/(ghq list | str trim | to text --raw)"'';
+      q = ''cd $"(ghq root)/(ghq list | str trim | to text)"'';
       nixc = "cd ~/nixos-config/";
       initpart = "nix flake init -t github:hercules-ci/flake-parts";
     };
@@ -21,14 +21,8 @@
       completions = {
         case_sensitive = false;
       };
-      color_config = "dark";
       show_banner = false;
     };
-
-    extraConfig = ''
-      $env.config.table_mode = 'rounded'
-      $env.config.use_ls_colors = true
-    '';
   };
 
   programs.starship = {
