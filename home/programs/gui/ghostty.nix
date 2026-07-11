@@ -7,7 +7,7 @@ let
     # background-image-fit = cover
     # background-image-opacity = 0.1
     background-opacity = 0.7
-    background-blur = 20
+    background-blur = true
   '' else if device == "mac" then ''
     font-size = 17
     macos-titlebar-style = hidden
