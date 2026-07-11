@@ -5,6 +5,7 @@
     ./direnv.nix
     ./tmux.nix
     ./zsh.nix
+    ./nushell.nix
     ./yazi.nix
     ./gh.nix
   ];
