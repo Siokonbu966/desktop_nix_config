@@ -43,6 +43,10 @@
       url = "github:homebrew/homebrew-bundle";
       flake = false;
     };
+    herdr = {
+      url = "github:ogulcancelik/herdr/v0.7.3";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
   };
 
   outputs = {
@@ -62,7 +66,7 @@
   }@inputs:
   {
     darwinConfigurations."mac" = nix-darwin.lib.darwinSystem {
-      specialArgs = { inherit self; };
+      specialArgs = { inherit self inputs; };
       modules = [ 
         ./hosts/mac
         home-manager.darwinModules.home-manager
@@ -107,6 +111,7 @@
     nixosConfigurations = {
       wsl = inputs.nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
         modules = [
           nixos-wsl.nixosModules.default
           {
@@ -143,6 +148,7 @@
 
       surface = inputs.nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
         modules = [
           ./hosts/surface
           inputs.xremap-flake.nixosModules.default
@@ -155,7 +161,7 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               extraSpecialArgs = {
-                inherit my-dotfiles;
+                inherit my-dotfiles inputs;
                 device = "surface";
                 nixvim-module = nixvim.homeModules.nixvim;
               };
