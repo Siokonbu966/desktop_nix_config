@@ -1,4 +1,4 @@
-{ device ? "desktop", ...}:
+{ device ? "saffron", ...}:
 let
   device_flake = if device == "mac" then ''
     /Users/crocus/nixos-config

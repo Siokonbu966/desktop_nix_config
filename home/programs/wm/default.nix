@@ -1,6 +1,6 @@
-{ device ? "desktop", ...}: 
+{ device ? "saffron", ...}: 
 let
-  device_wm = if device == "desktop" then [
+  device_wm = if device == "saffron" then [
     ./niri.nix
   ] else if device == "surface" then [
     ./sway.nix

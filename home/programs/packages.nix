@@ -1,6 +1,6 @@
 { device ? "wsl", pkgs, ... }:
 let
-  device_conf = if device == "desktop" then (with pkgs; [
+  device_conf = if device == "saffron" then (with pkgs; [
     ghostty
     kitty
     slurp

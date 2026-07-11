@@ -1,6 +1,6 @@
-{ device ? "desktop", my-dotfiles, ...}:
+{ device ? "saffron", my-dotfiles, ...}:
 let
-  deviceConfig_xdg = if device == "desktop" then {
+  deviceConfig_xdg = if device == "saffron" then {
     "niri".source = ../../../configs/niri;
     "picom".source = "${my-dotfiles}/picom.conf";
     "kitty".source = "${my-dotfiles}/kitty";

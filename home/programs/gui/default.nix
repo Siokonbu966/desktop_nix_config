@@ -1,6 +1,6 @@
 { device ? "surface", ...}:
 let
-  device_gui = if device == "desktop" then [
+  device_gui = if device == "saffron" then [
     ./noctalia.nix
   ] else [];
 in

@@ -175,41 +175,6 @@
         ];
       };
 
-      desktop = inputs.nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
-        modules = [
-          ./hosts/desktop
-          ./nvidia
-          inputs.xremap-flake.nixosModules.default
-          ./modules/xremap
-          ./modules/wm
-          nix-ld.nixosModules.nix-ld
-          { programs.nix-ld.dev.enable = true; }
-
-          home-manager.nixosModules.home-manager {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              extraSpecialArgs = {
-                inherit
-                  my-dotfiles
-                  inputs
-                ;
-                device = "desktop";
-                nixvim-module = nixvim.homeModules.nixvim;
-              };
-              users.crocus = {
-                imports = [
-                  inputs.noctalia.homeModules.default
-                  ./home
-                ];
-              };
-            };
-          }
-        ];
-      };
-
       saffron = inputs.nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };

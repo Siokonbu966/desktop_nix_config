@@ -1,6 +1,6 @@
-{ device ? "desktop", ...}:
+{ device ? "saffron", ...}:
 let
-  deviceConfig = if device == "desktop" then ''
+  deviceConfig = if device == "saffron" then ''
     font-size = 17
     window-decoration = none
     # background-image = /home/crocus/Pictures/Wallpapers/mahuyu_26_birthday.jpg
