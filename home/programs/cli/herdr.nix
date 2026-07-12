@@ -12,10 +12,8 @@
       shell_mode = "auto";
     };
     theme = {
-      auto_switch = true;
-      name = "catppuccin";
-      dark_name = "catppuccin";
-      light_name = "catppuccin-latte";
+      name = "kanagawa";
+      dark_name = "kanagawa";
     };
     ui = {
       sidebar_width = 32;

@@ -4,7 +4,7 @@
     enable = true;
 
     shellAliases = {
-      q = ''cd $"(ghq root)/(ghq list | str trim | to text)"'';
+      q = ''cd $"(ghq root)/(ghq list | str trim | lines | to text | fzf)"'';
       nixc = "cd ~/nixos-config/";
       initpart = "nix flake init -t github:hercules-ci/flake-parts";
     };

@@ -6,7 +6,7 @@ let
     # background-image = /home/crocus/Pictures/Wallpapers/mahuyu_26_birthday.jpg
     # background-image-fit = cover
     # background-image-opacity = 0.1
-    background-opacity = 0.7
+    # background-opacity = 0.7
     background-blur = true
   '' else if device == "mac" then ''
     font-size = 17
