@@ -19,7 +19,7 @@ let
     vesktop
     slack
     pavucontrol
-    realvnc-vnc-viewer
+    # realvnc-vnc-viewer
     kdePackages.falkon
     vlc
     anki
@@ -60,7 +60,7 @@ let
     # desktop client
     obsidian
     pavucontrol
-    realvnc-vnc-viewer
+    # realvnc-vnc-viewer
     kdePackages.falkon
     vlc
     zed-editor
