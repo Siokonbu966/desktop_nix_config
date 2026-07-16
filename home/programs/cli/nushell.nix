@@ -23,6 +23,8 @@
       };
       show_banner = false;
     };
+
+    configFile.source = ../../../configs/nu/git-completion.nu; 
   };
 
   programs.starship = {
