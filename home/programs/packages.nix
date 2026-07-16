@@ -14,6 +14,7 @@ let
     grim
     wl-clipboard
     xremap
+    brightnessctl
     # desktop client
     obsidian
     vesktop
