@@ -72,6 +72,8 @@
       "networkmanager"
       "wheel"
       "inputs"
+      "video"
+      "i2c"
     ];
     shell = pkgs.zsh;
     packages = with pkgs; [
