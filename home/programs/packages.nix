@@ -15,6 +15,7 @@ let
     wl-clipboard
     xremap
     brightnessctl
+    ddcutil
     # desktop client
     obsidian
     vesktop
