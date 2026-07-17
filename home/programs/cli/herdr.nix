@@ -14,6 +14,9 @@
     theme = {
       name = "kanagawa";
       dark_name = "kanagawa";
+      custom = {
+        panel_bg = "transparent";
+      };
     };
     ui = {
       sidebar_width = 32;
@@ -23,6 +26,9 @@
     };
     keys = {
       prefix = "ctrl+g";
+    };
+    experimental = {
+      kitty_graphics = true;
     };
   };
 }
