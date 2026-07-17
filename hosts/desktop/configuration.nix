@@ -12,6 +12,8 @@
     prefixLength = 24;
   }];
 
+  hardware.brillo.enable = true;
+  hardware.i2c.enable = true;
   programs.obs-studio.enableVirtualCamera = true;
 
   # vmware
