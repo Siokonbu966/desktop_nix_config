@@ -14,8 +14,8 @@
       "tailscale-app"
       "alt-tab"
       "appcleaner"
-      "vscodium"
       "whatcable"
+      "anki"
     ];
     onActivation = {
       autoUpdate = false;
