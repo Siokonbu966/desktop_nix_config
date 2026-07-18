@@ -209,9 +209,9 @@
           fillColor = "#000000";
           useSolidColor = false;
           solidColor = "#1a1a2e";
-          automationEnabled = false;
+          automationEnabled = true;
           wallpaperChangeMode = "random";
-          randomIntervalSec = 300;
+          randomIntervalSec = 1800;
           transitionDuration = 1500;
           transitionType = [
             "fade"
