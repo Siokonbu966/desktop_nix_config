@@ -27,6 +27,10 @@
     };
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
     xremap-flake.url = "github:xremap/nix-flake";
+    buzz = {
+      url = "github:block/buzz";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
     nix-homebrew = {
       url = "github:zhaofengli/nix-homebrew";
       inputs.nixpkgs.follows = "nixpkgs";
