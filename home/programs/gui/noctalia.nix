@@ -61,6 +61,9 @@
                 id = "NotificationHistory";
               }
               {
+                id = "WallpaperSelector";
+              }
+              {
                 id = "Battery";
               }
               {
@@ -211,7 +214,7 @@
           solidColor = "#1a1a2e";
           automationEnabled = true;
           wallpaperChangeMode = "random";
-          randomIntervalSec = 1800;
+          randomIntervalSec = 1200;
           transitionDuration = 1500;
           transitionType = [
             "fade"
