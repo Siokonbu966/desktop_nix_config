@@ -27,19 +27,4 @@ in {
     noto-fonts-color-emoji
     font-awesome
   ];
-  fonts.fontDir.enable = true;
-  fonts.fontconfig = {
-    defaultFonts = {
-      serif = [
-        "Noto Serif CJK JP"
-        "Noto Color Emoji"
-      ];
-      sansSerif = [
-        "Noto Sans"
-        "Noto Sans CJK JP"
-        "Noto Color Emoji"
-      ];
-      emoji = ["Noto Color Emoji"];
-    };
-  };
 }
