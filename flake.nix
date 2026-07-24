@@ -47,167 +47,35 @@
       url = "github:ogulcancelik/herdr/v0.7.3";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+    flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
   outputs = {
     self,
-    nixpkgs,
-    home-manager,
-    my-dotfiles,
-    nixvim,
-    nix-darwin,
-    nix-ld,
-    nixos-wsl,
-    nix-homebrew,
-    homebrew-core,
-    homebrew-cask,
-    homebrew-bundle,
+    flake-parts,
     ...
   }@inputs:
-  {
-    darwinConfigurations."mac" = nix-darwin.lib.darwinSystem {
-      specialArgs = { inherit self inputs; };
-      modules = [ 
-        ./hosts/mac
-        home-manager.darwinModules.home-manager
-
-        nix-homebrew.darwinModules.nix-homebrew
-        {
-          nix-homebrew = {
-            enable = true;
-            user = "crocus";
-            autoMigrate = true;
-            taps = {
-              "homebrew/homebrew-core" = homebrew-core;
-              "homebrew/homebrew-cask" = homebrew-cask;
-              "homebrew/homebrew-bundle" = homebrew-bundle;
-            };
-            mutableTaps = false;
-          };
-        }
-        ({ config, ... }: {
-          homebrew.taps = builtins.attrNames config.nix-homebrew.taps;
-        })
-        {
-          home-manager = {
-            useGlobalPkgs = true;
-            useUserPackages = true;
-            backupFileExtension = "backup";
-            extraSpecialArgs = {
-              inherit
-                inputs
-                my-dotfiles
-              ;
-              nixvim-module = nixvim.homeModules.nixvim;
-              device = "mac";
-            };
-            users.crocus = import ./home/mac.nix;
-          };
-          nixpkgs.config.allowUnfree = true;
-        }
-      ];
-    };
-
-    nixosConfigurations = {
-      wsl = inputs.nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
-        modules = [
-          nixos-wsl.nixosModules.default
-          {
-            system.stateVersion = "26.05";
-            wsl.enable = true;
-            wsl.defaultUser = "crocus";
-          }
-          nix-ld.nixosModules.nix-ld
-          { programs.nix-ld.dev.enable = true; }
-          ./hosts/wsl
-          ./modules/font.nix
-
-          home-manager.nixosModules.home-manager {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              extraSpecialArgs = {
-                inherit 
-                  my-dotfiles
-                  inputs
-                ;
-                device = "wsl";
-                nixvim-module = nixvim.homeModules.nixvim;
-              };
-              users.crocus = {
-                imports = [
-                  ./home/wsl.nix
-                ];
-              };
-            };
-          }
-        ];
+  flake-parts.lib.mkFlake { inherit inputs; } {
+    flake = {
+      darwinConfigurations."mac" = import ./flake/hosts/mac.nix {
+        inherit
+          self
+          inputs
+          ;
       };
 
-      surface = inputs.nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
-        modules = [
-          ./hosts/surface
-          inputs.xremap-flake.nixosModules.default
-          ./modules/xremap
-          nix-ld.nixosModules.nix-ld
-          { programs.nix-ld.dev.enable = true; }
+      nixosConfigurations = {
+        wsl = import ./flake/hosts/wsl.nix {
+          inherit inputs;
+        };
 
-          home-manager.nixosModules.home-manager {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              extraSpecialArgs = {
-                inherit my-dotfiles inputs;
-                device = "surface";
-                nixvim-module = nixvim.homeModules.nixvim;
-              };
-              users.crocus = {
-                imports = [
-                  ./home/surface.nix
-                ];
-              };
-            };
-          }
-        ];
-      };
+        surface = import ./flake/hosts/surface.nix {
+          inherit inputs;
+        };
 
-      saffron = inputs.nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
-        modules = [
-          ./hosts/desktop
-          ./nvidia
-          inputs.xremap-flake.nixosModules.default
-          ./modules/xremap
-          ./modules/wm
-          nix-ld.nixosModules.nix-ld
-          { programs.nix-ld.dev.enable = true; }
-
-          home-manager.nixosModules.home-manager {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              extraSpecialArgs = {
-                inherit
-                  my-dotfiles
-                  inputs
-                ;
-                device = "saffron";
-                nixvim-module = nixvim.homeModules.nixvim;
-              };
-              users.crocus = {
-                imports = [
-                  inputs.noctalia.homeModules.default
-                  ./home/saffron.nix
-                ];
-              };
-            };
-          }
-        ];
+        saffron = import ./flake/hosts/saffron.nix {
+          inherit inputs;
+        };
       };
     };
   };
