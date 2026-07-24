@@ -1,0 +1,50 @@
+{
+  self,
+  inputs,
+  ...
+}:
+let
+  inherit (inputs) nix-darwin nix-homebrew homebrew-core homebrew-cask homebrew-bundle home-manager nixvim my-dotfiles;
+in
+nix-darwin.lib.darwinSystem {
+  specialArgs = { inherit self inputs; };
+  modules = [
+    ../../hosts/mac
+    home-manager.darwinModules.home-manager
+
+    nix-homebrew.darwinModules.nix-homebrew
+    {
+      nix-homebrew = {
+        enable = true;
+        user = "crocus";
+        autoMigrate = true;
+        taps = {
+          "homebrew/homebrew-core" = homebrew-core;
+          "homebrew/homebrew-cask" = homebrew-cask;
+          "homebrew/homebrew-bundle" = homebrew-bundle;
+        };
+        mutableTaps = false;
+      };
+    }
+    ({ config, ... }: {
+      homebrew.taps = builtins.attrNames config.nix-homebrew.taps;
+    })
+    {
+      home-manager = {
+        useGlobalPkgs = true;
+        useUserPackages = true;
+        backupFileExtension = "backup";
+        extraSpecialArgs = {
+          inherit
+            inputs
+            my-dotfiles
+          ;
+          nixvim-module = nixvim.homeModules.nixvim;
+          device = "mac";
+        };
+        users.crocus = import ../../home/mac.nix;
+      };
+      nixpkgs.config.allowUnfree = true;
+    }
+  ];
+}
