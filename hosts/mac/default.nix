@@ -2,6 +2,7 @@
 {
   imports = [
     ./brew.nix
+    ../../modules/font.nix
   ];
 
   environment.systemPackages = with pkgs; [
