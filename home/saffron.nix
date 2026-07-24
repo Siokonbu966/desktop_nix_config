@@ -6,6 +6,7 @@
     ./programs/nixvim
     ./programs/gui
     ./programs/cli
+    ./programs/obsidian.nix
   ];
 
   home = rec {
