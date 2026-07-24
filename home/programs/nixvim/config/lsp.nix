@@ -17,7 +17,7 @@
               expr = "import ${flake}.inputs.nixpkgs { }";
             };
             formatting = {
-              command = [ "${lib.getExe pkgs.nixfmt-rfc-style}" ];
+              command = [ "${lib.getExe pkgs.nixfmt}" ];
             };
             options = {
               nixos.expr = ''${flake}.nixosConfigurations.grovetender.options'';
