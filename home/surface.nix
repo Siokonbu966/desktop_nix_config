@@ -6,6 +6,7 @@
     ./programs/gui
     ./programs/utils
     ./programs/wm
+    ./programs/obsidian.nix
   ];
 
   home = rec {
