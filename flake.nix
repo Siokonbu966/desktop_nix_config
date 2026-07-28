@@ -47,6 +47,10 @@
       url = "github:ogulcancelik/herdr/v0.7.3";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote/v1.1.0";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -62,6 +66,7 @@
     homebrew-core,
     homebrew-cask,
     homebrew-bundle,
+    lanzaboote,
     ...
   }@inputs:
   {
@@ -186,6 +191,7 @@
           ./modules/wm
           nix-ld.nixosModules.nix-ld
           { programs.nix-ld.dev.enable = true; }
+          lanzaboote.nixosModules.lanzaboote
 
           home-manager.nixosModules.home-manager {
             home-manager = {
