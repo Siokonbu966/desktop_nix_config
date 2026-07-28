@@ -1,12 +1,9 @@
-{
-  let
-    githubToken = builtins.readFile "/home/crocus/.config/nix/github-token";
-    netrcContent = ''
-      machine api.github.com
-      password ${githubToken}
-    '';
-  in {
-    environment.etc."nix/netrc".text = netrcContent;
-    nix.settings.netrc-file = "/etc/nix/netrc";
-  }
+let
+  githubToken = builtins.getEnv "GITHUB_TOKEN";
+in {
+  environment.etc."nix/netrc".text = ''
+    machine api.github.com
+    password ${githubToken}
+  '';
+  nix.settings.netrc-file = "/etc/nix/netrc";
 }
