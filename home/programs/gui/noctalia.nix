@@ -153,7 +153,7 @@
           smoothScrollEnabled = true;
         };
         ui = {
-          fontDefault = "Noto Sans CJK JP";
+          fontDefault = "Gen Interface JP";
           fontFixed = "Noto Sans Mono CJK JP";
           fontDefaultScale = 1;
           fontFixedScale = 1;
