@@ -1,7 +1,11 @@
 { pkgs, ... }:
 
 {
-# Define a user account. Don't forget to set a password with ‘passwd’.
+# Define a user account. Don't forget to set a password with 'passwd'.
+  imports = [
+    ../../modules/netrc.nix
+  ];
+
   users.users.crocus = {
     isNormalUser = true;
     description = "crocus";

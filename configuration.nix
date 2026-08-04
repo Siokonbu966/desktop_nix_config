@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./modules
       ./modules/xremap
+      ./modules/netrc.nix
     ];
 
 
@@ -117,22 +118,6 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
-
-  fonts.fontDir.enable = true;
-  fonts.fontconfig = {
-    defaultFonts = {
-      serif = [
-        "Noto Serif CJK JP"
-        "Noto Color Emoji"
-      ];
-      sansSerif = [
-        "Noto Sans"
-        "Noto Sans CJK JP"
-        "Noto Color Emoji"
-      ];
-      emoji = ["Noto Color Emoji"];
-    };
-  };
 
   nix = {
     settings = {

@@ -3,12 +3,13 @@
   imports = [
     ../../configuration.nix
     ./hardware-configuration.nix
+    ../../modules/secureboot.nix
   ];
 
   networking.hostName = "saffron";
 
   networking.interfaces.enp10s0.ipv4.addresses = [{
-    address = "192.168.0.19";
+    address = "192.168.0.92";
     prefixLength = 24;
   }];
 

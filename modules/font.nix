@@ -1,6 +1,6 @@
 { pkgs, ... }:
 let
-  kosugi-maru = pkgs.stdenv.mkDerivation  {
+  kosugi-maru = pkgs.stdenv.mkDerivation {
     pname = "kosugi-maru";
     version = "1.0";
 
@@ -16,9 +16,28 @@ let
       cp $src $out/share/fonts/truetype/KosugiMaru-Regular.ttf
     '';
   };
+
+  gen-interface-jp = pkgs.stdenv.mkDerivation {
+    pname = "gen-interface-jp";
+    version = "0.8.0";
+
+    src = pkgs.fetchzip {
+      url = "https://github.com/yamatoiizuka/gen-interface-jp/releases/download/v0.8.0/GenInterfaceJP-0.8.0.zip";
+      sha256 = "sha256-vEPYe1T2/TmsEkvAljC++dwbAXTqF1JBEhUZ1kBGTiI=";
+    };
+
+    dontBuild = true;
+
+    installPhase = ''
+      mkdir -p $out/share/fonts/truetype
+      find . -path '*/Gen Interface JP/GenInterfaceJP-*.ttf' \
+        -exec cp {} $out/share/fonts/truetype/ \;
+    '';
+  };
 in {
   # fonts
   fonts.packages = with pkgs; [
+    gen-interface-jp
     kosugi-maru
     nerd-fonts.meslo-lg
     nerd-fonts.mononoki

@@ -3,6 +3,7 @@
   imports = [
     ./brew.nix
     ../../modules/font.nix
+    ../../modules/netrc.nix
   ];
 
   environment.systemPackages = with pkgs; [
