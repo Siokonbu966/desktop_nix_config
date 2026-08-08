@@ -9,5 +9,6 @@
     ./herdr.nix
     ./yazi.nix
     ./gh.nix
+    ./emacs.nix
   ];
 }

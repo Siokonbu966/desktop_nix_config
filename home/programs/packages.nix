@@ -22,6 +22,7 @@ let
     slack
     pavucontrol
     # realvnc-vnc-viewer
+    tigervnc
     kdePackages.falkon
     vlc
     anki
@@ -36,6 +37,7 @@ let
     signal-desktop
     qtractor
     lmms
+    nb
     # sway
     swaybg
     swayr
@@ -45,7 +47,7 @@ let
     wofi
     alacritty
     # niri
-   niri
+    niri
   ]) else if device == "surface" then (with pkgs; [
     ghostty
     slurp
