@@ -32,6 +32,7 @@ nix-darwin.lib.darwinSystem {
         backupFileExtension = "backup";
         extraSpecialArgs = {
           inherit inputs my-dotfiles user_name;
+          device = "mac";
           nixvim-module = nixvim.homeModules.nixvim;
         };
         users.${user_name} = import ../../home/zephyr.nix;
