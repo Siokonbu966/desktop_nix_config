@@ -61,11 +61,15 @@
   }@inputs:
   flake-parts.lib.mkFlake { inherit inputs; } {
     flake = {
-      darwinConfigurations."mac" = import ./flake/hosts/mac.nix {
-        inherit
-          self
-          inputs
-          ;
+      darwinConfigurations = {
+        "mac" = import ./flake/hosts/mac.nix {
+          inherit self inputs;
+        };
+
+        "zephyr" = import ./flake/hosts/zephyr.nix {
+          user_name = "zephyr";
+          inherit self inputs;
+        };
       };
 
       nixosConfigurations = {

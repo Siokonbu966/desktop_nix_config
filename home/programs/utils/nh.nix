@@ -2,6 +2,8 @@
 let
   device_flake = if device == "mac" then ''
     /Users/crocus/nixos-config
+  '' else if device == "zephyr" then ''
+    /Users/zephyr/nixos-config
   '' else ''
     /home/crocus/nixos-config
   '';
