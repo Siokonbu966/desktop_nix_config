@@ -434,12 +434,14 @@ binds {
     Mod+Q repeat=false { close-window; }
 
     Mod+Left  { focus-column-left; }
+    Mod+k  { focus-column-left; }
     Mod+Down  { focus-window-down; }
     Mod+Up    { focus-window-up; }
     Mod+Right { focus-column-right; }
+    Mod+s     { focus-column-right; }
     Mod+H     { focus-column-left; }
     Mod+J     { focus-window-down; }
-    Mod+K     { focus-window-up; }
+    // Mod+K     { focus-window-up; }
     Mod+L     { focus-column-right; }
 
     Mod+Ctrl+Left  { move-column-left; }
