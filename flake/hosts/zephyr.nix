@@ -3,7 +3,7 @@ let
   inherit (inputs) nix-darwin nix-homebrew homebrew-core homebrew-cask homebrew-bundle home-manager nixvim my-dotfiles;
 in
 nix-darwin.lib.darwinSystem {
-  specialArgs = { inherit self inputs; };
+  specialArgs = { inherit self inputs user_name; };
   modules = [
     ../../hosts/zephyr
     home-manager.darwinModules.home-manager
@@ -31,7 +31,7 @@ nix-darwin.lib.darwinSystem {
         useUserPackages = true;
         backupFileExtension = "backup";
         extraSpecialArgs = {
-          inherit inputs my-dotfiles;
+          inherit inputs my-dotfiles user_name;
           nixvim-module = nixvim.homeModules.nixvim;
         };
         users.${user_name} = import ../../home/zephyr.nix;
