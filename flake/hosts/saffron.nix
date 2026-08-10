@@ -3,13 +3,14 @@
   ...
 }:
 let
-  inherit (inputs) nixpkgs home-manager nixvim nix-ld xremap-flake noctalia my-dotfiles;
+  inherit (inputs) nixpkgs home-manager nixvim nix-ld xremap-flake noctalia my-dotfiles lanzaboote;
 in
 nixpkgs.lib.nixosSystem {
   system = "x86_64-linux";
   modules = [
     ../../hosts/desktop
     ../../nvidia
+    lanzaboote.nixosModules.lanzaboote
     xremap-flake.nixosModules.default
     ../../modules/xremap
     ../../modules/wm
