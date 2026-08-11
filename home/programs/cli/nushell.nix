@@ -24,7 +24,12 @@
       show_banner = false;
     };
 
-    configFile.source = ../../../configs/nu/git-completion.nu; 
+    configFile.source = ../../../configs/nu/default.nu;
+  };
+
+  home.file = {
+    ".config/nushell/git-completion.nu".source = ../../../configs/nu/git-completion.nu;
+    ".config/nushell/ssh-agent.nu".source = ../../../configs/nu/ssh-agent.nu;
   };
 
   programs.starship = {
