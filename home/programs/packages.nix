@@ -75,6 +75,8 @@ let
     swayr
     swaylock
     swayidle
+  ]) else if device == "zephyr" then (with pkgs; [
+    cloudflared
   ]) else [];
 in
 {
