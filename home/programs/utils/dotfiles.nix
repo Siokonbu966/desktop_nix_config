@@ -5,7 +5,7 @@ let
     "picom".source = "${my-dotfiles}/picom.conf";
     "kitty".source = "${my-dotfiles}/kitty";
   } else if device == "mac" then {
-    "karabiner".source = "${my-dotfiles}/karabiner";
+    "karabiner".source = ../../../configs/karabiner;
   } else {};
 in
 {
