@@ -37,6 +37,7 @@ let
     signal-desktop
     qtractor
     lmms
+    kdePackages.kdenlive
     nb
     # sway
     swaybg
