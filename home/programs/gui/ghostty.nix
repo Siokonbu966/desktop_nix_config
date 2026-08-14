@@ -8,7 +8,7 @@ let
     # background-image-opacity = 0.1
     background-opacity = 0.7
     background-blur = true
-  '' else if device == "mac" then ''
+  '' else if device == "freesia" then ''
     font-size = 17
     macos-titlebar-style = hidden
     # background-image = /Users/crocus/works/Wallpapers/cho-kaguya_concept01c.png
