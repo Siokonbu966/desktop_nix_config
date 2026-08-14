@@ -4,7 +4,7 @@ let
     "niri".source = ../../../configs/niri;
     "picom".source = "${my-dotfiles}/picom.conf";
     "kitty".source = "${my-dotfiles}/kitty";
-  } else if device == "mac" then {
+  } else if device == "freesia" then {
     "karabiner".source = ../../../configs/karabiner;
   } else {};
 in
