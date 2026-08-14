@@ -1,6 +1,6 @@
 { device ? "saffron", ...}:
 let
-  device_flake = if device == "mac" then ''
+  device_flake = if device == "freesia" then ''
     /Users/crocus/nixos-config
   '' else if device == "zephyr" then ''
     /Users/zephyr/nixos-config
