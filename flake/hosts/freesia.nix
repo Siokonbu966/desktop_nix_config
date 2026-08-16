@@ -9,7 +9,7 @@ in
 nix-darwin.lib.darwinSystem {
   specialArgs = { inherit self inputs; };
   modules = [
-    ../../hosts/mac
+    ../../hosts/freesia
     home-manager.darwinModules.home-manager
 
     nix-homebrew.darwinModules.nix-homebrew
@@ -30,6 +30,11 @@ nix-darwin.lib.darwinSystem {
       homebrew.taps = builtins.attrNames config.nix-homebrew.taps;
     })
     {
+      nixpkgs.overlays = [
+        (final: prev: {
+          omniwm = final.callPackage ../../pkgs/omniwm.nix { };
+        })
+      ];
       home-manager = {
         useGlobalPkgs = true;
         useUserPackages = true;
@@ -40,9 +45,9 @@ nix-darwin.lib.darwinSystem {
             my-dotfiles
           ;
           nixvim-module = nixvim.homeModules.nixvim;
-          device = "mac";
+          device = "freesia";
         };
-        users.crocus = import ../../home/mac.nix;
+        users.crocus = import ../../home/freesia.nix;
       };
       nixpkgs.config.allowUnfree = true;
     }

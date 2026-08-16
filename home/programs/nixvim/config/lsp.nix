@@ -52,10 +52,4 @@
     };
   };
 
-  # Ensure language server executables are available.
-  # (Some servers are pulled in automatically by nixvim, but this makes it explicit.)
-  extraPackages = with pkgs; [
-    typescript-language-server
-    vscode-langservers-extracted
-  ];
 }

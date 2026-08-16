@@ -62,7 +62,7 @@
   flake-parts.lib.mkFlake { inherit inputs; } {
     flake = {
       darwinConfigurations = {
-        "mac" = import ./flake/hosts/mac.nix {
+        "freesia" = import ./flake/hosts/freesia.nix {
           inherit self inputs;
         };
 
