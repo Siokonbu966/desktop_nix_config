@@ -30,6 +30,11 @@ nix-darwin.lib.darwinSystem {
       homebrew.taps = builtins.attrNames config.nix-homebrew.taps;
     })
     {
+      nixpkgs.overlays = [
+        (final: prev: {
+          omniwm = final.callPackage ../../pkgs/omniwm.nix { };
+        })
+      ];
       home-manager = {
         useGlobalPkgs = true;
         useUserPackages = true;
