@@ -9,7 +9,7 @@ do --env {
             load-env $ssh_agent_env
             return
         } else {
-            rm $ssh_agent_file
+            rm --force $ssh_agent_file
         }
     }
 
