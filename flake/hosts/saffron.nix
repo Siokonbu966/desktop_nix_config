@@ -17,6 +17,17 @@ nixpkgs.lib.nixosSystem {
     nix-ld.nixosModules.nix-ld
     { programs.nix-ld.dev.enable = true; }
 
+    {
+      nixpkgs.overlays = [
+        (final: prev: {
+          buzz-sidecars = final.callPackage ../../pkgs/buzz-sidecars.nix { };
+          buzz-desktop = final.callPackage ../../pkgs/buzz-desktop.nix {
+            inherit (final) buzz-sidecars;
+          };
+        })
+      ];
+    }
+
     home-manager.nixosModules.home-manager {
       home-manager = {
         useGlobalPkgs = true;

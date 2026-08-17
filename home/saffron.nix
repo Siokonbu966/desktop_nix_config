@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   imports = [
     ./programs/packages.nix
     ./programs/utils
@@ -13,6 +13,7 @@
     username = "crocus";
     homeDirectory = "/home/${username}";
     stateVersion = "25.05";
+    packages = [ pkgs.buzz-desktop ];
   };
   programs.home-manager.enable = true;
 }
