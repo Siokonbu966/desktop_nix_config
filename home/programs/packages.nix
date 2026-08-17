@@ -77,7 +77,6 @@ let
     swayidle
   ]) else if device == "zephyr" then (with pkgs; [
     cloudflared
-    container
   ]) else [];
 in
 {
