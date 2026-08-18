@@ -4,6 +4,8 @@ let
     "niri".source = ../../../configs/niri;
     "picom".source = "${my-dotfiles}/picom.conf";
     "kitty".source = "${my-dotfiles}/kitty";
+  } else if device == "freesia" then {
+    "omniwm".source = ../../../configs/omniwm;
   } else {};
 in
 {
