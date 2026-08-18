@@ -21,10 +21,14 @@
     XDG_DATA_DIRS = "$XDG_DATA_DIRS:${pkgs.papirus-icon-theme}/share";
     XMODIFIERS = "@im=fcitx";
     QT_IM_MODULE = "fcitx";
-    GTK_IM_MODULE = "fcitx";
     # Fcitx5をWayland環境に完全に対応させる
     ECMA_IM_MODULE = "fcitx"; 
   };
+
+  # XWaylandアプリでIME候補ウィンドウを正しく表示するための設定
+  xdg.configFile."fcitx5/conf/xim.conf".text = ''
+    UseOnTheSpot=True
+  '';
 
   xdg.desktopEntries.obsidian = {
     name = "Obsidian";

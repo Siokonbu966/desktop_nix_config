@@ -31,6 +31,7 @@
   perl,
   jq,
   buzz-sidecars ? null,
+  gst_all_1,
 }:
 
 rustPlatform.buildRustPackage (finalAttrs: {
@@ -147,6 +148,10 @@ rustPlatform.buildRustPackage (finalAttrs: {
     dbus
     libsecret
     curl
+    gst_all_1.gstreamer
+    gst_all_1.gst-plugins-base
+    gst_all_1.gst-plugins-good
+    gst_all_1.gst-plugins-bad
   ];
 
   postPatch = ''
