@@ -1,4 +1,10 @@
-{ pkgs, ...}:
+{ device, pkgs, ...}:
+let
+  device_conf = if device == "wsl" then { }
+  else {
+    fcitx5.waylandFrontend = true;
+  };
+in
 {
   # Select internationalisation properties.
   i18n.defaultLocale = "ja_JP.UTF-8";
@@ -22,10 +28,9 @@
   i18n.inputMethod = {
     type = "fcitx5";
     enable = true;
-    fcitx5.waylandFrontend = true;
     fcitx5.addons = with pkgs;[
       fcitx5-mozc
       fcitx5-gtk
     ];
-  };
+  } // device_conf;
 }

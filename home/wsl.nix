@@ -9,8 +9,6 @@
     ./programs/ghq
     ./programs/fzf
     ./programs/ripgrep
-    ./programs/docker
-    ./programs/colima
     # cli
     ./programs/git
     ./programs/opencode

@@ -7,6 +7,9 @@ let
 in
 nixpkgs.lib.nixosSystem {
   system = "x86_64-linux";
+  specialArgs = {
+    device = "wsl";
+  };
   modules = [
     nixos-wsl.nixosModules.default
     {
@@ -18,6 +21,7 @@ nixpkgs.lib.nixosSystem {
     { programs.nix-ld.dev.enable = true; }
     ../../hosts/wsl
     ../../modules/font.nix
+    ../../modules/i18n.nix
 
     home-manager.nixosModules.home-manager {
       home-manager = {

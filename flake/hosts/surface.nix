@@ -7,6 +7,9 @@ let
 in
 nixpkgs.lib.nixosSystem {
   system = "x86_64-linux";
+  specialArgs = {
+    device = "surface";
+  };
   modules = [
     ../../hosts/surface
     xremap-flake.nixosModules.default
