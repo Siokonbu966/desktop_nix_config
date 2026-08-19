@@ -1,7 +1,6 @@
 { device, pkgs, ...}:
 let
-  isWsl = device == "wsl";
-  waylandFrontend = !isWsl;
+  waylandFrontend = device != "wsl";
 in
 {
   # Select internationalisation properties.
@@ -25,23 +24,11 @@ in
 
   i18n.inputMethod = {
     type = "fcitx5";
-    enable = !isWsl;
+    enable = device != "wsl";
     fcitx5.waylandFrontend = waylandFrontend;
     fcitx5.addons = with pkgs;[
       fcitx5-mozc
       fcitx5-gtk
     ];
   };
-
-  environment.variables = pkgs.lib.mkIf isWsl {
-    XMODIFIERS = "@im=fcitx";
-    GTK_IM_MODULE = "fcitx";
-    QT_IM_MODULE = "fcitx";
-  };
-
-  environment.systemPackages = pkgs.lib.mkIf isWsl (with pkgs; [
-    fcitx5
-    fcitx5-gtk
-    fcitx5-mozc
-  ]);
 }

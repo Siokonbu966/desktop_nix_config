@@ -22,7 +22,6 @@
     XMODIFIERS = "@im=fcitx";
     QT_IM_MODULE = "fcitx";
     GTK_IM_MODULE = "fcitx";
-    # Fcitx5をWayland環境に完全に対応させる
     ECMA_IM_MODULE = "fcitx"; 
   };
 
