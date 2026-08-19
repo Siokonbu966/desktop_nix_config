@@ -22,14 +22,12 @@
     ./programs/yazi
     ./programs/gh
     ./programs/emacs
-    # gui
-    ./programs/ghostty
+    ./programs/nb
     # utils
     ./programs/nh
     ./programs/dotfiles
     # other
     ./programs/omniwm
-    ./programs/obsidian
   ];
 
   programs.omniwm = {
