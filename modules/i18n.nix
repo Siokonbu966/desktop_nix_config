@@ -1,4 +1,7 @@
-{ pkgs, ...}:
+{ device, pkgs, ...}:
+let
+  waylandFrontend = device != "wsl";
+in
 {
   # Select internationalisation properties.
   i18n.defaultLocale = "ja_JP.UTF-8";
@@ -21,8 +24,8 @@
 
   i18n.inputMethod = {
     type = "fcitx5";
-    enable = true;
-    fcitx5.waylandFrontend = true;
+    enable = device != "wsl";
+    fcitx5.waylandFrontend = waylandFrontend;
     fcitx5.addons = with pkgs;[
       fcitx5-mozc
       fcitx5-gtk

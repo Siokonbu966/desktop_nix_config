@@ -1,11 +1,32 @@
-{ user_name, ... }:
+{ user_name, pkgs, ... }:
 {
   imports = [
     ./programs/nixvim
-    ./programs/cli
-    ./programs/utils/nh.nix
-    ./programs/utils/dotfiles.nix
-    ./programs/packages.nix
+    # common
+    ./programs/fastfetch
+    ./programs/tree
+    ./programs/btop
+    ./programs/ghq
+    ./programs/fzf
+    ./programs/ripgrep
+    ./programs/docker
+    ./programs/colima
+    # cli
+    ./programs/git
+    ./programs/opencode
+    ./programs/direnv
+    ./programs/tmux
+    ./programs/zsh
+    ./programs/nushell
+    ./programs/herdr
+    ./programs/yazi
+    ./programs/gh
+    ./programs/emacs
+    # utils
+    ./programs/nh
+    ./programs/dotfiles
+    # zephyr-specific
+    ./programs/cloudflared
   ];
 
   home = rec {

@@ -1,11 +1,29 @@
-{...}:
+{ pkgs, ... }:
 {
   imports = [
-    ./programs/cli
     ./programs/nixvim
-    ./programs/packages.nix
-    ./programs/utils/dotfiles.nix
-    ./programs/utils/nh.nix
+    # common
+    ./programs/fastfetch
+    ./programs/tree
+    ./programs/btop
+    ./programs/ghq
+    ./programs/fzf
+    ./programs/ripgrep
+    # cli
+    ./programs/git
+    ./programs/opencode
+    ./programs/direnv
+    ./programs/tmux
+    ./programs/zsh
+    ./programs/nushell
+    ./programs/herdr
+    ./programs/yazi
+    ./programs/gh
+    ./programs/emacs
+    ./programs/nb
+    # utils
+    ./programs/nh
+    ./programs/dotfiles
   ];
 
   home = rec {

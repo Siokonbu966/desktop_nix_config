@@ -1,14 +1,33 @@
-{...}:
+{ pkgs, ... }:
 {
   imports = [
     ./programs/nixvim
-    ./programs/cli
-    ./programs/gui/ghostty.nix
-    ./programs/omniwm.nix
-    ./programs/utils/nh.nix
-    ./programs/utils/dotfiles.nix
-    ./programs/packages.nix
-    ./programs/obsidian.nix
+    # common
+    ./programs/fastfetch
+    ./programs/tree
+    ./programs/btop
+    ./programs/ghq
+    ./programs/fzf
+    ./programs/ripgrep
+    ./programs/docker
+    ./programs/colima
+    # cli
+    ./programs/git
+    ./programs/opencode
+    ./programs/direnv
+    ./programs/tmux
+    ./programs/zsh
+    ./programs/nushell
+    ./programs/herdr
+    ./programs/yazi
+    ./programs/gh
+    ./programs/emacs
+    ./programs/nb
+    # utils
+    ./programs/nh
+    ./programs/dotfiles
+    # other
+    ./programs/omniwm
   ];
 
   programs.omniwm = {
