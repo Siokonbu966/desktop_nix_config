@@ -9,6 +9,7 @@
     ./programs/ghq
     ./programs/fzf
     ./programs/ripgrep
+    ./programs/w3m
     ./programs/docker
     ./programs/colima
     # cli

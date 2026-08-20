@@ -9,6 +9,7 @@
     ./programs/ghq
     ./programs/fzf
     ./programs/ripgrep
+    ./programs/w3m
     # cli
     ./programs/git
     ./programs/opencode
