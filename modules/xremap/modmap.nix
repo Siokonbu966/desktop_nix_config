@@ -27,8 +27,8 @@
       CapsLock = "q";
       Dot = "m";
      
-      b = "Ctrl_L";
-      n = "Alt_R";
+      b = "Alt_R";
+      n = "Ctrl_L";
       h = "Shift_L";
       t = "Kp0"; # +
 
