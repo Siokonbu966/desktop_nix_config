@@ -55,8 +55,11 @@
 
   ;; 相対的な行番号を表示
   (setq display-line-numbers-type 'relative)
+  (setq display-line-numbers-width 4)
+  (setq display-line-numbers-width-start nil)
+  (global-display-line-numbers-mode 1)
 
-  (leaf tab-bar-mode
+(leaf tab-bar-mode
     :init
     (define-key global-map (kbd "C-<up>") 'tab-bar-switch-to-prev-tab)
     (define-key global-map (kbd "C-<down>") 'tab-bar-switch-to-next-tab)
@@ -67,5 +70,25 @@
     :config
     (tab-bar-mode t)
     (face-spec-set 'tab-bar-tab '((((background light)) (:background "gold")) (((background dark)) (:background "#808080")))))
+
+    (setq auto-mode-alist
+          (append '(("\\.tex$" . yatex-mode)
+        ("\\.txt$" . indented-text-mode)
+        ("nifty.[a-z]*$" . xcscript-mode)
+        ("jyusyo\\.sgm$" . ramdb-mode)
+        ("pad[0-9]$" . nifty-post-mode)
+        ("\\.html$" . yahtml-mode)
+        ("\\.rb$" . ruby-mode)
+        ("lib[0-9][0-9]$" . qlog-library-mode)
+        ("/lib$" . qlog-library-forum-mode)
+        ("\\.md$" . markdown-mode)
+        ("\\.pov$" . pov-mode))
+            auto-mode-alist))
+
+;; init/ ディレクトリ内のファイルをすべて読み込む
+(let ((init-dir (expand-file-name "init" user-emacs-directory)))
+  (when (file-directory-p init-dir)
+    (dolist (f (directory-files init-dir t "\\.el$"))
+      (load f nil t))))
 
 (provide 'init)
