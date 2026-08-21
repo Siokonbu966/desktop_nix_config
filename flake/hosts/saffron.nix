@@ -11,7 +11,7 @@ nixpkgs.lib.nixosSystem {
     device = "saffron";
   };
   modules = [
-    ../../hosts/desktop
+    ../../hosts/saffron
     ../../nvidia
     lanzaboote.nixosModules.lanzaboote
     xremap-flake.nixosModules.default

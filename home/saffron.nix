@@ -24,6 +24,7 @@
     ./programs/yazi
     ./programs/gh
     ./programs/emacs
+    ./programs/glow
     # gui
     ./programs/fuzzel
     ./programs/obs
