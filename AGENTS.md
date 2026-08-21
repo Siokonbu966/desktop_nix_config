@@ -11,3 +11,9 @@
 - **Git Tracking Requirement**: Because this is a Nix Flake, **you must `git add` any newly created files** before attempting to build. The Nix evaluator cannot see untracked files.
 - **Test**: When change nix configuration then Use `nh os switch -n`, `nh darwin switch -n` and test flake files.
 - **Niri**: When change niri configuration then use `niri validate -c configs/niri/config.kdl` and test config file.
+
+## Notes
+
+- Since Nix Flakes do not recognize untracked files, you must run `git add` after creating new files.
+- After modifying the Niri configuration, validate the syntax using `niri validate -c configs/niri/config.kdl`.
+- Home Manager is integrated as a NixOS/darwin module (the standalone `home-manager switch` command cannot be used).
