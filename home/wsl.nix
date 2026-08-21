@@ -21,6 +21,7 @@
     ./programs/yazi
     ./programs/gh
     ./programs/emacs
+    ./programs/ink
     ./programs/nb
     # utils
     ./programs/nh

@@ -19,6 +19,13 @@ nixpkgs.lib.nixosSystem {
     }
     nix-ld.nixosModules.nix-ld
     { programs.nix-ld.dev.enable = true; }
+    {
+      nixpkgs.overlays = [
+        (final: prev: {
+          ink = final.callPackage ../../pkgs/ink.nix { };
+        })
+      ];
+    }
     ../../hosts/wsl
     ../../modules/font.nix
     ../../modules/i18n.nix

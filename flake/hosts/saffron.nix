@@ -27,6 +27,7 @@ nixpkgs.lib.nixosSystem {
           buzz-desktop = final.callPackage ../../pkgs/buzz-desktop.nix {
             inherit (final) buzz-sidecars;
           };
+          ink = final.callPackage ../../pkgs/ink.nix { };
         })
       ];
     }

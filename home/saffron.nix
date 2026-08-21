@@ -25,6 +25,7 @@
     ./programs/gh
     ./programs/emacs
     ./programs/glow
+    ./programs/ink
     # gui
     ./programs/fuzzel
     ./programs/obs
