@@ -23,6 +23,7 @@
     ./programs/emacs
     ./programs/ink
     ./programs/nb
+    ./programs/emacs
     # utils
     ./programs/nh
     ./programs/dotfiles
