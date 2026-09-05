@@ -107,6 +107,8 @@ input {
 }
 
 output "DP-3" {
+  // main display
+  mode "2560x1440@74.971"
   variable-refresh-rate
   focus-at-startup
 
@@ -115,14 +117,22 @@ output "DP-3" {
   }
 }
 
-output "HDMI-A-1" {
-  // transform "90"
-  position x=0 y=0
+output "DP-1" {
+  // sub display
+  mode "2560x1440@119.998"
+  variable-refresh-rate
 
-  layout {
-    default-column-width { proportion 1.0; }
-  }
+  position x=0 y=0
 }
+
+//output "HDMI-A-1" {
+//  // transform "90"
+//  position x=0 y=0
+//
+//  layout {
+//    default-column-width { proportion 1.0; }
+//  }
+//}
 
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
