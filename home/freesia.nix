@@ -12,6 +12,7 @@
     ./programs/w3m
     ./programs/docker
     ./programs/colima
+    ./programs/ghostty/config.nix
     # cli
     ./programs/git
     ./programs/opencode

@@ -5,17 +5,16 @@
       "firefox"
       "obsidian"
       "ghostty"
-      "loop"
       "karabiner-elements"
       "discord"
       "slack"
       "google-chrome"
       "lm-studio"
       "tailscale-app"
-      "alt-tab"
       "appcleaner"
       "whatcable"
       "anki"
+      "obs"
     ];
     onActivation = {
       autoUpdate = false;
