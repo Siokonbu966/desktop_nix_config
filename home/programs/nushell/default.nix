@@ -27,7 +27,9 @@
     configFile.text =
       builtins.readFile ../../../configs/nu/ssh-agent.nu
       + "\n"
-      + builtins.readFile ../../../configs/nu/git-completion.nu;
+      + builtins.readFile ../../../configs/nu/git-completion.nu
+      + "\n"
+      + builtins.readFile ../../../configs/nu/inknb.nu;
   };
 
   programs.starship = {
