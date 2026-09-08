@@ -51,39 +51,50 @@
         (load-theme 'doom-dark+ t)
         (set-frame-parameter nil 'alpha 92))     
 
-  (set-frame-font "Gen Interface JP 18")
+(set-frame-font "Gen Interface JP 18")
+;; (setq default-font-size 18)
 
-  ;; 相対的な行番号を表示
-  (setq display-line-numbers-type 'relative)
-  (setq display-line-numbers-width 4)
-  (setq display-line-numbers-width-start nil)
-  (global-display-line-numbers-mode 1)
+;; 相対的な行番号を表示
+(setq display-line-numbers-type t)
+(setq display-line-numbers-width 4)
+(setq display-line-numbers-width-start nil)
+(global-display-line-numbers-mode 1)
+(setq display-line-numbers-grow-only t)
+(setq toggle-truncate-lines nil)
+;; 行番号のフォントを明確に等幅（例: Courierやmonospace）に固定する
 
-(leaf tab-bar-mode
-    :init
-    (define-key global-map (kbd "C-<up>") 'tab-bar-switch-to-prev-tab)
-    (define-key global-map (kbd "C-<down>") 'tab-bar-switch-to-next-tab)
-    (define-key global-map (kbd "C-t") 'tab-bar-new-tab)
-    (define-key global-map (kbd "C-w") 'tab-bar-close-tab)
-    :custom
-    ((tab-bar-new-tab-choice . "*scratch*"))
-    :config
-    (tab-bar-mode t)
-    (face-spec-set 'tab-bar-tab '((((background light)) (:background "gold")) (((background dark)) (:background "#808080")))))
+(set-face-attribute 'line-number nil
+                    :font "BIZ UDGothic" ; お好みの等幅フォントを指定
+                    :height 1.0)       ; 本文のサイズと合わせる場合
+(set-face-attribute 'line-number-current-line nil
+                    :font "BIZ UDGothic"
+                    :height 1.0)
 
-    (setq auto-mode-alist
-          (append '(("\\.tex$" . yatex-mode)
-        ("\\.txt$" . indented-text-mode)
-        ("nifty.[a-z]*$" . xcscript-mode)
-        ("jyusyo\\.sgm$" . ramdb-mode)
-        ("pad[0-9]$" . nifty-post-mode)
-        ("\\.html$" . yahtml-mode)
-        ("\\.rb$" . ruby-mode)
-        ("lib[0-9][0-9]$" . qlog-library-mode)
-        ("/lib$" . qlog-library-forum-mode)
-        ("\\.md$" . markdown-mode)
-        ("\\.pov$" . pov-mode))
-            auto-mode-alist))
+;; (leaf tab-bar-mode
+;;     :init
+;;     (define-key global-map (kbd "C-<up>") 'tab-bar-switch-to-prev-tab)
+;;     (define-key global-map (kbd "C-<down>") 'tab-bar-switch-to-next-tab)
+;;     (define-key global-map (kbd "C-t") 'tab-bar-new-tab)
+;;     (define-key global-map (kbd "C-w") 'tab-bar-close-tab)
+;;     :custom
+;;     ((tab-bar-new-tab-choice . "*scratch*"))
+;;     :config
+;;     (tab-bar-mode t)
+;;     (face-spec-set 'tab-bar-tab '((((background light)) (:background "gold")) (((background dark)) (:background "#808080")))))
+
+(setq auto-mode-alist
+      (append '(("\\.tex$" . yatex-mode)
+    ("\\.txt$" . indented-text-mode)
+    ("nifty.[a-z]*$" . xcscript-mode)
+    ("jyusyo\\.sgm$" . ramdb-mode)
+    ("pad[0-9]$" . nifty-post-mode)
+    ("\\.html$" . yahtml-mode)
+    ("\\.rb$" . ruby-mode)
+    ("lib[0-9][0-9]$" . qlog-library-mode)
+    ("/lib$" . qlog-library-forum-mode)
+    ("\\.md$" . markdown-mode)
+    ("\\.pov$" . pov-mode))
+        auto-mode-alist))
 
 ;; init/ ディレクトリ内のファイルをすべて読み込む
 (let ((init-dir (expand-file-name "init" user-emacs-directory)))

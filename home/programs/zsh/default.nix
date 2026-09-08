@@ -22,6 +22,19 @@
       alias nixc='cd ~/nixos-config/'
       alias initpart='nix flake init -t github:hercules-ci/flake-parts'
       zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+      inknb() {
+        if [[ -z "$1" ]]; then
+          echo "Usage: inknb <notebook:id>"
+          return 1
+        fi
+
+        note_path=$(nb show --path "$1") || {
+          echo "Error: Could not find item '$1'"
+          return 1
+        }
+        ink "$note_path"
+      }
     '';
   };
 }
